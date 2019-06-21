@@ -1,0 +1,46 @@
+[21/Jun/2019:03:41:29] ENGINE Listening for SIGTERM.
+[21/Jun/2019:03:41:29] ENGINE Listening for SIGHUP.
+[21/Jun/2019:03:41:29] ENGINE Listening for SIGUSR1.
+[21/Jun/2019:03:41:29] ENGINE Bus STARTING
+[21/Jun/2019:03:41:29] ENGINE Started monitor thread 'Autoreloader'.
+[21/Jun/2019:03:41:29] ENGINE Serving on http://0.0.0.0:8080
+[21/Jun/2019:03:41:29] ENGINE Bus STARTED
+[21/Jun/2019:03:41:48] ENGINE Restarting because config.txt changed.
+[21/Jun/2019:03:41:48] ENGINE Stopped thread 'Autoreloader'.
+[21/Jun/2019:03:41:48] ENGINE Bus STOPPING
+[21/Jun/2019:03:41:48] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8080)) shut down
+[21/Jun/2019:03:41:48] ENGINE Bus STOPPED
+[21/Jun/2019:03:41:48] ENGINE Bus EXITING
+[21/Jun/2019:03:41:48] ENGINE Bus EXITED
+[21/Jun/2019:03:41:48] ENGINE Waiting for child threads to terminate...
+[21/Jun/2019:03:41:48] ENGINE Re-spawning python app.py
+[21/Jun/2019:03:41:49] ENGINE Listening for SIGTERM.
+[21/Jun/2019:03:41:49] ENGINE Listening for SIGHUP.
+[21/Jun/2019:03:41:49] ENGINE Listening for SIGUSR1.
+[21/Jun/2019:03:41:49] ENGINE Bus STARTING
+[21/Jun/2019:03:41:49] ENGINE Started monitor thread 'Autoreloader'.
+[21/Jun/2019:03:41:49] ENGINE Serving on http://0.0.0.0:8080
+[21/Jun/2019:03:41:49] ENGINE Bus STARTED
+[21/Jun/2019:03:42:23] ENGINE Keyboard Interrupt: shutting down bus
+[21/Jun/2019:03:42:23] ENGINE Bus STOPPING
+[21/Jun/2019:03:42:23] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8080)) shut down
+[21/Jun/2019:03:42:23] ENGINE Stopped thread 'Autoreloader'.
+[21/Jun/2019:03:42:23] ENGINE Bus STOPPED
+[21/Jun/2019:03:42:23] ENGINE Bus EXITING
+[21/Jun/2019:03:42:23] ENGINE Bus EXITED
+[21/Jun/2019:03:42:23] ENGINE Waiting for child threads to terminate...
+[21/Jun/2019:03:45:30] ENGINE Listening for SIGTERM.
+[21/Jun/2019:03:45:30] ENGINE Listening for SIGHUP.
+[21/Jun/2019:03:45:30] ENGINE Listening for SIGUSR1.
+[21/Jun/2019:03:45:30] ENGINE Bus STARTING
+[21/Jun/2019:03:45:30] ENGINE Started monitor thread 'Autoreloader'.
+[21/Jun/2019:03:45:30] ENGINE Serving on http://0.0.0.0:8080
+[21/Jun/2019:03:45:30] ENGINE Bus STARTED
+[21/Jun/2019:03:45:46] ENGINE Keyboard Interrupt: shutting down bus
+[21/Jun/2019:03:45:46] ENGINE Bus STOPPING
+[21/Jun/2019:03:45:46] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8080)) shut down
+[21/Jun/2019:03:45:46] ENGINE Stopped thread 'Autoreloader'.
+[21/Jun/2019:03:45:46] ENGINE Bus STOPPED
+[21/Jun/2019:03:45:46] ENGINE Bus EXITING
+[21/Jun/2019:03:45:46] ENGINE Bus EXITED
+[21/Jun/2019:03:45:46] ENGINE Waiting for child threads to terminate...

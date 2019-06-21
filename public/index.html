@@ -1,0 +1,155 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/docs/4.0/assets/img/favicons/favicon.ico"> -->
+
+    <title>Fixed top navbar example for Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/navbar-fixed/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="navbar-top-fixed.css" rel="stylesheet"> -->
+    <style>
+      body {
+        min-height: 75rem;
+        padding-top: 4.5rem;
+      }
+      .jumbotron{background-color:lightgrey; margin-left:5%; margin-right:5%; margin-top:2em;padding:1em;border-radius:10px;margin-bottom:-5%}
+      .name{font-size:2em;display:inline-block;margin-left:1em}
+      .contrib{display:inline-block; float:right; margin-top:1em}
+      .comment{margin-top:1em;}
+      .statement{margin-top:1em;}
+      .copy{color:#fff}
+      .copyButton{margin-bottom:1em;}
+    </style>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">MMSearch</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <!-- <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul> -->
+        <input id="searchInput" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      </div>
+    </nav>
+    <div id="results">
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/3cb437ac97.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="elasticsearch.jquery.min.js"></script>
+
+    <script>
+      function copyStringToClipboard (str) {
+         // Create new element
+         var el = document.createElement('textarea');
+         // Set value (string to be copied)
+         el.value = str;
+         // Set non-editable to avoid focus and move outside of view
+         el.setAttribute('readonly', '');
+         el.style = {position: 'absolute', left: '-9999px'};
+         document.body.appendChild(el);
+         // Select text inside element
+         el.select();
+         // Copy text to clipboard
+         document.execCommand('copy');
+         // Remove temporary element
+         document.body.removeChild(el);
+      }
+
+      // Get the input field
+      var input = document.getElementById("searchInput");
+
+      // Execute a function when the user releases a key on the keyboard
+      input.addEventListener("keyup", function(event) {
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+
+          $('#results').empty()
+          var client = new $.es.Client({
+            hosts: 'https://public:public@f0a0721cc7aa468ea5ee667f7322e731.eu-west-1.aws.found.io:9243'
+          });
+          client.search({
+            index: 'metamath',
+            body: {
+              query: {
+                simple_query_string: {
+                 query: input.value
+                }
+              }
+            }
+          }).then(function (resp) {
+            var hits = resp.hits.hits;
+            hits.forEach(function(hit) {
+              theorem = hit._source
+              var div = document.createElement('div');
+              date = new Date(theorem["date"])
+              // div.innerHTML =  `
+              //   <main role="main" class="container">
+              //     <div class="jumbotron">
+              //       <h1>`+theorem["name"]+`</h1>
+              //       <p><i>`+theorem["contributor"]+` `+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+`</i></p>
+              //       <p class="lead">`+theorem["html"]["comment"]+`</p>
+              //       <p>`+theorem["html"]["statement"]+`</p>
+              //       <a class="btn btn-lg btn-primary" href="theorem/`+theorem["name"]+`.html" role="button">View &raquo;</a>
+              //     </div>
+              //   </main>
+              //   `
+
+
+                div.innerHTML =  `
+                <main role="main" class="container">
+                  <div class="jumbotron">
+                    <a class="btn btn-sm btn-primary copyButton" onclick="copyStringToClipboard('`+theorem["name"]+`')" role="button"><span class="fas fa-copy copy"></span></a><div class="name"><a href="theorem/`+theorem["name"]+`.html">`+theorem["name"]+`</a></div>
+                    <div class="contrib"><i>`+theorem["contributor"]+` `+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear()+`</i></div>
+                    <div class="comment">`+theorem["html"]["comment"]+`</div>
+                    <div class="statement">`+theorem["html"]["statement"]+`</div>
+
+                  </div>
+                </main>`
+
+
+                // <div class="copy" onclick="copyStringToClipboard('`+theorem["name"]+`')">copy</div>
+
+              document.getElementById('results').appendChild(div);
+              $(div).find("th").remove()
+              $(div).find("caption").remove()
+            })
+          }, function (err) {
+            console.trace(err.message);
+          });
+          input.value=""
+        }
+      });
+    </script>
+
+  </body>
+</html>
