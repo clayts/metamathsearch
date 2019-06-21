@@ -19,7 +19,7 @@
     <!-- <link href="navbar-top-fixed.css" rel="stylesheet"> -->
     <style>
       body {
-        min-height: 75rem;
+        min-height: 5rem;
         padding-top: 4.5rem;
       }
       .jumbotron{background-color:#eee; margin-left:5%; margin-right:5%; margin-top:2em;padding:1em;border-radius:10px}
@@ -84,13 +84,32 @@
          // Remove temporary element
          document.body.removeChild(el);
       }
+      page = 0
+
+      function scrollFunction(ev) {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight-250) {
+         page +=1
+         addResults(inputValue, page);
+        }
+
+      }
+      var client = new $.es.Client({
+        hosts: 'https://public:public@f0a0721cc7aa468ea5ee667f7322e731.eu-west-1.aws.found.io:9243'
+      });
       function addResults(query, page) {
+        window.onscroll = null
         if (query == "" ){
           return
         }
-        var client = new $.es.Client({
-          hosts: 'https://public:public@f0a0721cc7aa468ea5ee667f7322e731.eu-west-1.aws.found.io:9243'
-        });
+        var loadingDiv = document.createElement('div')
+        loadingDiv.innerHTML=`
+        <main role="main" class="container">
+          <div class="jumbotron">
+            <div class="info">Searching...</div>
+          </div>
+        </main>
+        `
+        document.getElementById('results').appendChild(loadingDiv);
         client.search({
           index: 'metamath',
           body: {
@@ -125,6 +144,22 @@
             $(div).find("caption").remove()
             delay+=50
           })
+          if (hits.length == 10)  {
+            setTimeout(function() { window.onscroll = scrollFunction }, 500);
+          }
+          if (hits.length == 0 && page == 0) {
+            var div = document.createElement('div');
+              div.innerHTML =  `
+              <main role="main" class="container">
+                <div class="jumbotron">
+                  <div class="info">No Results</div>
+                </div>
+              </main>`
+            document.getElementById('results').appendChild(div);
+            $(div).fadeOut(0)
+            $(div).fadeIn()
+          }
+          $(loadingDiv).remove()
         }, function (err) {
           console.trace(err.message);
         });
@@ -133,10 +168,10 @@
       var input = document.getElementById("searchInput");
       var inputValue = ""
       // Execute a function when the user releases a key on the keyboard
-      page = 0
       input.addEventListener("keyup", function(event) {
         // Number 13 is the "Enter" key on the keyboard
         if (event.keyCode === 13) {
+          window.scrollTo(0, 0)
           $('#results').empty()
           page = 0
           inputValue = input.value
@@ -145,14 +180,7 @@
         }
       });
 
-      window.onscroll = function(ev) {
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-         console.log("bottom",inputValue,page);
-         page +=1
-         addResults(inputValue, page);
-        }
-      };
-
+      window.scrollTo(0, 0)
     </script>
 
   </body>

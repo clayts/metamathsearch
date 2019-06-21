@@ -171,9 +171,9 @@ for labelIndex, label in enumerate(labels):
 
             date = flatComment.split("(Contributed by "+contributor+", ")[1].split(".)")[0]
 
-            removalString = "\(Contributed[\n\r\s]{1,}by[\n\r\s]{1,}"+contributor+"\,[\n\r\s]{1,}"+date+"\.\)"
+            removalString = "\(Contributed[\n\r\s]{1,}by[\n\r\s]{1,}"+contributor.replace(" ","[\n\r\s]{1,}")+"\,[\n\r\s]{1,}"+date+"\.\)"
             theorem["html"]["comment"] = re.sub(removalString,"",theorem["html"]["comment"])
-            theorem["comment"] = re.sub(removalString,"",theorem["comment"])
+            theorem["comment"] = reduceSpacing(re.sub(removalString,"",theorem["comment"]))
 
             date = dateparser.parse(date)
             theorem["date"] = date
