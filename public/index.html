@@ -108,6 +108,7 @@
             }
           }).then(function (resp) {
             var hits = resp.hits.hits;
+            delay = 10
             hits.forEach(function(hit) {
               theorem = hit._source
               var div = document.createElement('div');
@@ -140,8 +141,11 @@
                 // <div class="copy" onclick="copyStringToClipboard('`+theorem["name"]+`')">copy</div>
 
               document.getElementById('results').appendChild(div);
+              $(div).fadeOut(0).delay(delay)
+              $(div).fadeIn()
               $(div).find("th").remove()
               $(div).find("caption").remove()
+              delay+=50
             })
           }, function (err) {
             console.trace(err.message);
