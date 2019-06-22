@@ -1,46 +1,1220 @@
-[21/Jun/2019:03:41:29] ENGINE Listening for SIGTERM.
-[21/Jun/2019:03:41:29] ENGINE Listening for SIGHUP.
-[21/Jun/2019:03:41:29] ENGINE Listening for SIGUSR1.
-[21/Jun/2019:03:41:29] ENGINE Bus STARTING
-[21/Jun/2019:03:41:29] ENGINE Started monitor thread 'Autoreloader'.
-[21/Jun/2019:03:41:29] ENGINE Serving on http://0.0.0.0:8080
-[21/Jun/2019:03:41:29] ENGINE Bus STARTED
-[21/Jun/2019:03:41:48] ENGINE Restarting because config.txt changed.
-[21/Jun/2019:03:41:48] ENGINE Stopped thread 'Autoreloader'.
-[21/Jun/2019:03:41:48] ENGINE Bus STOPPING
-[21/Jun/2019:03:41:48] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8080)) shut down
-[21/Jun/2019:03:41:48] ENGINE Bus STOPPED
-[21/Jun/2019:03:41:48] ENGINE Bus EXITING
-[21/Jun/2019:03:41:48] ENGINE Bus EXITED
-[21/Jun/2019:03:41:48] ENGINE Waiting for child threads to terminate...
-[21/Jun/2019:03:41:48] ENGINE Re-spawning python app.py
-[21/Jun/2019:03:41:49] ENGINE Listening for SIGTERM.
-[21/Jun/2019:03:41:49] ENGINE Listening for SIGHUP.
-[21/Jun/2019:03:41:49] ENGINE Listening for SIGUSR1.
-[21/Jun/2019:03:41:49] ENGINE Bus STARTING
-[21/Jun/2019:03:41:49] ENGINE Started monitor thread 'Autoreloader'.
-[21/Jun/2019:03:41:49] ENGINE Serving on http://0.0.0.0:8080
-[21/Jun/2019:03:41:49] ENGINE Bus STARTED
-[21/Jun/2019:03:42:23] ENGINE Keyboard Interrupt: shutting down bus
-[21/Jun/2019:03:42:23] ENGINE Bus STOPPING
-[21/Jun/2019:03:42:23] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8080)) shut down
-[21/Jun/2019:03:42:23] ENGINE Stopped thread 'Autoreloader'.
-[21/Jun/2019:03:42:23] ENGINE Bus STOPPED
-[21/Jun/2019:03:42:23] ENGINE Bus EXITING
-[21/Jun/2019:03:42:23] ENGINE Bus EXITED
-[21/Jun/2019:03:42:23] ENGINE Waiting for child threads to terminate...
-[21/Jun/2019:03:45:30] ENGINE Listening for SIGTERM.
-[21/Jun/2019:03:45:30] ENGINE Listening for SIGHUP.
-[21/Jun/2019:03:45:30] ENGINE Listening for SIGUSR1.
-[21/Jun/2019:03:45:30] ENGINE Bus STARTING
-[21/Jun/2019:03:45:30] ENGINE Started monitor thread 'Autoreloader'.
-[21/Jun/2019:03:45:30] ENGINE Serving on http://0.0.0.0:8080
-[21/Jun/2019:03:45:30] ENGINE Bus STARTED
-[21/Jun/2019:03:45:46] ENGINE Keyboard Interrupt: shutting down bus
-[21/Jun/2019:03:45:46] ENGINE Bus STOPPING
-[21/Jun/2019:03:45:46] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 8080)) shut down
-[21/Jun/2019:03:45:46] ENGINE Stopped thread 'Autoreloader'.
-[21/Jun/2019:03:45:46] ENGINE Bus STOPPED
-[21/Jun/2019:03:45:46] ENGINE Bus EXITING
-[21/Jun/2019:03:45:46] ENGINE Bus EXITED
-[21/Jun/2019:03:45:46] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:03:55:51] ENGINE Listening for SIGTERM.
+[22/Jun/2019:03:55:51] ENGINE Listening for SIGHUP.
+[22/Jun/2019:03:55:51] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:03:55:51] ENGINE Bus STARTING
+[22/Jun/2019:03:55:51] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:03:55:51] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:03:55:51] ENGINE Bus STARTED
+[22/Jun/2019:03:56:23] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:03:56:23] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:03:56:23] ENGINE Bus STOPPING
+[22/Jun/2019:03:56:23] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:03:56:23] ENGINE Bus STOPPED
+[22/Jun/2019:03:56:23] ENGINE Bus EXITING
+[22/Jun/2019:03:56:23] ENGINE Bus EXITED
+[22/Jun/2019:03:56:23] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:03:56:23] ENGINE Re-spawning python app.py
+[22/Jun/2019:03:56:24] ENGINE Listening for SIGTERM.
+[22/Jun/2019:03:56:24] ENGINE Listening for SIGHUP.
+[22/Jun/2019:03:56:24] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:03:56:24] ENGINE Bus STARTING
+[22/Jun/2019:03:56:24] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:03:56:24] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:03:56:24] ENGINE Bus STARTED
+[22/Jun/2019:03:56:25] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2019:03:56:25] ENGINE Bus STOPPING
+[22/Jun/2019:03:56:25] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:03:56:25] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:03:56:25] ENGINE Bus STOPPED
+[22/Jun/2019:03:56:25] ENGINE Bus EXITING
+[22/Jun/2019:03:56:25] ENGINE Bus EXITED
+[22/Jun/2019:03:56:25] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:03:56:26] ENGINE Listening for SIGTERM.
+[22/Jun/2019:03:56:26] ENGINE Listening for SIGHUP.
+[22/Jun/2019:03:56:26] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:03:56:26] ENGINE Bus STARTING
+[22/Jun/2019:03:56:26] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:03:56:26] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:03:56:26] ENGINE Bus STARTED
+[22/Jun/2019:03:56:53] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:03:56:53] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:03:56:53] ENGINE Bus STOPPING
+[22/Jun/2019:03:56:53] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:03:56:53] ENGINE Bus STOPPED
+[22/Jun/2019:03:56:53] ENGINE Bus EXITING
+[22/Jun/2019:03:56:53] ENGINE Bus EXITED
+[22/Jun/2019:03:56:53] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:03:56:53] ENGINE Re-spawning python app.py
+[22/Jun/2019:03:56:55] ENGINE Listening for SIGTERM.
+[22/Jun/2019:03:56:55] ENGINE Listening for SIGHUP.
+[22/Jun/2019:03:56:55] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:03:56:55] ENGINE Bus STARTING
+[22/Jun/2019:03:56:55] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:03:56:55] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:03:56:55] ENGINE Bus STARTED
+[22/Jun/2019:03:57:02] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2019:03:57:02] ENGINE Bus STOPPING
+[22/Jun/2019:03:57:05] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:03:57:05] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:03:57:05] ENGINE Bus STOPPED
+[22/Jun/2019:03:57:05] ENGINE Bus EXITING
+[22/Jun/2019:03:57:05] ENGINE Bus EXITED
+[22/Jun/2019:03:57:05] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:03:57:05] ENGINE Waiting for thread CP Server Thread-4.
+[22/Jun/2019:03:57:12] ENGINE Listening for SIGTERM.
+[22/Jun/2019:03:57:12] ENGINE Listening for SIGHUP.
+[22/Jun/2019:03:57:12] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:03:57:12] ENGINE Bus STARTING
+[22/Jun/2019:03:57:12] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:03:57:12] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:03:57:12] ENGINE Bus STARTED
+[22/Jun/2019:03:57:18] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2019:03:57:18] ENGINE Bus STOPPING
+[22/Jun/2019:03:57:23] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:03:57:23] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:03:57:23] ENGINE Bus STOPPED
+[22/Jun/2019:03:57:23] ENGINE Bus EXITING
+[22/Jun/2019:03:57:23] ENGINE Bus EXITED
+[22/Jun/2019:03:57:23] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:03:58:14] ENGINE Listening for SIGTERM.
+[22/Jun/2019:03:58:14] ENGINE Listening for SIGHUP.
+[22/Jun/2019:03:58:14] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:03:58:14] ENGINE Bus STARTING
+[22/Jun/2019:03:58:14] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:03:58:14] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:03:58:14] ENGINE Bus STARTED
+[22/Jun/2019:03:58:47] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:03:58:47] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:03:58:47] ENGINE Bus STOPPING
+[22/Jun/2019:03:58:47] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:03:58:47] ENGINE Bus STOPPED
+[22/Jun/2019:03:58:47] ENGINE Bus EXITING
+[22/Jun/2019:03:58:47] ENGINE Bus EXITED
+[22/Jun/2019:03:58:47] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:03:58:47] ENGINE Re-spawning python app.py
+[22/Jun/2019:03:58:49] ENGINE Listening for SIGTERM.
+[22/Jun/2019:03:58:49] ENGINE Listening for SIGHUP.
+[22/Jun/2019:03:58:49] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:03:58:49] ENGINE Bus STARTING
+[22/Jun/2019:03:58:49] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:03:58:49] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:03:58:49] ENGINE Bus STARTED
+[22/Jun/2019:03:58:51] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2019:03:58:51] ENGINE Bus STOPPING
+[22/Jun/2019:03:58:51] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:03:58:51] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:03:58:51] ENGINE Bus STOPPED
+[22/Jun/2019:03:58:51] ENGINE Bus EXITING
+[22/Jun/2019:03:58:51] ENGINE Bus EXITED
+[22/Jun/2019:03:58:51] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:03:58:52] ENGINE Listening for SIGTERM.
+[22/Jun/2019:03:58:52] ENGINE Listening for SIGHUP.
+[22/Jun/2019:03:58:52] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:03:58:52] ENGINE Bus STARTING
+[22/Jun/2019:03:58:52] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:03:58:52] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:03:58:52] ENGINE Bus STARTED
+[22/Jun/2019:03:59:09] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2019:03:59:09] ENGINE Bus STOPPING
+[22/Jun/2019:03:59:09] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:03:59:09] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:03:59:09] ENGINE Bus STOPPED
+[22/Jun/2019:03:59:09] ENGINE Bus EXITING
+[22/Jun/2019:03:59:09] ENGINE Bus EXITED
+[22/Jun/2019:03:59:09] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:03:59:10] ENGINE Listening for SIGTERM.
+[22/Jun/2019:03:59:10] ENGINE Listening for SIGHUP.
+[22/Jun/2019:03:59:10] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:03:59:10] ENGINE Bus STARTING
+[22/Jun/2019:03:59:10] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:03:59:10] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:03:59:10] ENGINE Bus STARTED
+[22/Jun/2019:04:01:35] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:04:01:35] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:04:01:35] ENGINE Bus STOPPING
+[22/Jun/2019:04:01:35] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:04:01:35] ENGINE Bus STOPPED
+[22/Jun/2019:04:01:35] ENGINE Bus EXITING
+[22/Jun/2019:04:01:35] ENGINE Bus EXITED
+[22/Jun/2019:04:01:35] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:04:01:35] ENGINE Re-spawning python app.py
+[22/Jun/2019:04:01:37] ENGINE Listening for SIGTERM.
+[22/Jun/2019:04:01:37] ENGINE Listening for SIGHUP.
+[22/Jun/2019:04:01:37] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:04:01:37] ENGINE Bus STARTING
+[22/Jun/2019:04:01:37] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:04:01:37] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:04:01:37] ENGINE Bus STARTED
+[22/Jun/2019:04:01:38] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2019:04:01:38] ENGINE Bus STOPPING
+[22/Jun/2019:04:01:38] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:04:01:38] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:04:01:38] ENGINE Bus STOPPED
+[22/Jun/2019:04:01:38] ENGINE Bus EXITING
+[22/Jun/2019:04:01:38] ENGINE Bus EXITED
+[22/Jun/2019:04:01:38] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:04:01:39] ENGINE Listening for SIGTERM.
+[22/Jun/2019:04:01:39] ENGINE Listening for SIGHUP.
+[22/Jun/2019:04:01:39] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:04:01:39] ENGINE Bus STARTING
+[22/Jun/2019:04:01:39] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:04:01:39] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:04:01:39] ENGINE Bus STARTED
+[22/Jun/2019:04:01:58] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:04:01:58] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:04:01:58] ENGINE Bus STOPPING
+[22/Jun/2019:04:01:58] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:04:01:58] ENGINE Bus STOPPED
+[22/Jun/2019:04:01:58] ENGINE Bus EXITING
+[22/Jun/2019:04:01:58] ENGINE Bus EXITED
+[22/Jun/2019:04:01:58] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:04:01:58] ENGINE Re-spawning python app.py
+[22/Jun/2019:04:02:00] ENGINE Listening for SIGTERM.
+[22/Jun/2019:04:02:00] ENGINE Listening for SIGHUP.
+[22/Jun/2019:04:02:00] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:04:02:00] ENGINE Bus STARTING
+[22/Jun/2019:04:02:00] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:04:02:00] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:04:02:00] ENGINE Bus STARTED
+[22/Jun/2019:04:02:10] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2019:04:02:10] ENGINE Bus STOPPING
+[22/Jun/2019:04:02:15] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:04:02:15] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:04:02:15] ENGINE Bus STOPPED
+[22/Jun/2019:04:02:15] ENGINE Bus EXITING
+[22/Jun/2019:04:02:15] ENGINE Bus EXITED
+[22/Jun/2019:04:02:15] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:04:03:27] ENGINE Listening for SIGTERM.
+[22/Jun/2019:04:03:27] ENGINE Listening for SIGHUP.
+[22/Jun/2019:04:03:27] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:04:03:27] ENGINE Bus STARTING
+[22/Jun/2019:04:03:27] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:04:03:27] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:04:03:27] ENGINE Bus STARTED
+[22/Jun/2019:04:07:40] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:04:07:40] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:04:07:40] ENGINE Bus STOPPING
+[22/Jun/2019:04:07:40] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:04:07:40] ENGINE Bus STOPPED
+[22/Jun/2019:04:07:40] ENGINE Bus EXITING
+[22/Jun/2019:04:07:40] ENGINE Bus EXITED
+[22/Jun/2019:04:07:40] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:04:07:40] ENGINE Re-spawning python app.py
+[22/Jun/2019:04:07:41] ENGINE Listening for SIGTERM.
+[22/Jun/2019:04:07:41] ENGINE Listening for SIGHUP.
+[22/Jun/2019:04:07:41] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:04:07:41] ENGINE Bus STARTING
+[22/Jun/2019:04:07:41] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:04:07:42] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:04:07:42] ENGINE Bus STARTED
+[22/Jun/2019:04:07:43] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2019:04:07:43] ENGINE Bus STOPPING
+[22/Jun/2019:04:07:43] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:04:07:43] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:04:07:43] ENGINE Bus STOPPED
+[22/Jun/2019:04:07:43] ENGINE Bus EXITING
+[22/Jun/2019:04:07:43] ENGINE Bus EXITED
+[22/Jun/2019:04:07:43] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:04:07:44] ENGINE Listening for SIGTERM.
+[22/Jun/2019:04:07:44] ENGINE Listening for SIGHUP.
+[22/Jun/2019:04:07:44] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:04:07:44] ENGINE Bus STARTING
+[22/Jun/2019:04:07:44] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:04:07:45] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:04:07:45] ENGINE Bus STARTED
+[22/Jun/2019:04:08:18] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:04:08:18] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:04:08:18] ENGINE Bus STOPPING
+[22/Jun/2019:04:08:18] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:04:08:18] ENGINE Bus STOPPED
+[22/Jun/2019:04:08:18] ENGINE Bus EXITING
+[22/Jun/2019:04:08:18] ENGINE Bus EXITED
+[22/Jun/2019:04:08:19] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:04:08:19] ENGINE Re-spawning python app.py
+[22/Jun/2019:04:08:20] ENGINE Listening for SIGTERM.
+[22/Jun/2019:04:08:20] ENGINE Listening for SIGHUP.
+[22/Jun/2019:04:08:20] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:04:08:20] ENGINE Bus STARTING
+[22/Jun/2019:04:08:20] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:04:08:20] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:04:08:20] ENGINE Bus STARTED
+[22/Jun/2019:04:15:44] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:04:15:44] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:04:15:44] ENGINE Bus STOPPING
+[22/Jun/2019:04:15:44] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:04:15:44] ENGINE Bus STOPPED
+[22/Jun/2019:04:15:44] ENGINE Bus EXITING
+[22/Jun/2019:04:15:44] ENGINE Bus EXITED
+[22/Jun/2019:04:15:44] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:04:15:44] ENGINE Re-spawning python app.py
+[22/Jun/2019:04:15:55] ENGINE Listening for SIGTERM.
+[22/Jun/2019:04:15:55] ENGINE Listening for SIGHUP.
+[22/Jun/2019:04:15:55] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:04:15:55] ENGINE Bus STARTING
+[22/Jun/2019:04:15:55] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:04:15:56] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:04:15:56] ENGINE Bus STARTED
+[22/Jun/2019:04:16:25] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:04:16:25] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:04:16:25] ENGINE Bus STOPPING
+[22/Jun/2019:04:16:25] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:04:16:25] ENGINE Bus STOPPED
+[22/Jun/2019:04:16:25] ENGINE Bus EXITING
+[22/Jun/2019:04:16:25] ENGINE Bus EXITED
+[22/Jun/2019:04:16:25] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:04:16:25] ENGINE Re-spawning python app.py
+[22/Jun/2019:04:16:26] ENGINE Listening for SIGTERM.
+[22/Jun/2019:04:16:26] ENGINE Listening for SIGHUP.
+[22/Jun/2019:04:16:26] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:04:16:26] ENGINE Bus STARTING
+[22/Jun/2019:04:16:26] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:04:16:26] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:04:16:26] ENGINE Bus STARTED
+[22/Jun/2019:04:16:45] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:04:16:45] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:04:16:45] ENGINE Bus STOPPING
+[22/Jun/2019:04:16:45] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:04:16:45] ENGINE Bus STOPPED
+[22/Jun/2019:04:16:45] ENGINE Bus EXITING
+[22/Jun/2019:04:16:45] ENGINE Bus EXITED
+[22/Jun/2019:04:16:45] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:04:16:45] ENGINE Re-spawning python app.py
+[22/Jun/2019:04:16:46] ENGINE Listening for SIGTERM.
+[22/Jun/2019:04:16:46] ENGINE Listening for SIGHUP.
+[22/Jun/2019:04:16:46] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:04:16:46] ENGINE Bus STARTING
+[22/Jun/2019:04:16:46] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:04:16:47] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:04:16:47] ENGINE Bus STARTED
+[22/Jun/2019:04:17:15] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:04:17:15] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:04:17:15] ENGINE Bus STOPPING
+[22/Jun/2019:04:17:15] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:04:17:15] ENGINE Bus STOPPED
+[22/Jun/2019:04:17:15] ENGINE Bus EXITING
+[22/Jun/2019:04:17:15] ENGINE Bus EXITED
+[22/Jun/2019:04:17:15] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:04:17:15] ENGINE Re-spawning python app.py
+[22/Jun/2019:04:17:16] ENGINE Listening for SIGTERM.
+[22/Jun/2019:04:17:16] ENGINE Listening for SIGHUP.
+[22/Jun/2019:04:17:16] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:04:17:16] ENGINE Bus STARTING
+[22/Jun/2019:04:17:16] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:04:17:16] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:04:17:16] ENGINE Bus STARTED
+[22/Jun/2019:04:17:20] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2019:04:17:20] ENGINE Bus STOPPING
+[22/Jun/2019:04:17:20] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:04:17:20] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:04:17:20] ENGINE Bus STOPPED
+[22/Jun/2019:04:17:20] ENGINE Bus EXITING
+[22/Jun/2019:04:17:20] ENGINE Bus EXITED
+[22/Jun/2019:04:17:20] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:04:17:22] ENGINE Listening for SIGTERM.
+[22/Jun/2019:04:17:22] ENGINE Listening for SIGHUP.
+[22/Jun/2019:04:17:22] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:04:17:22] ENGINE Bus STARTING
+[22/Jun/2019:04:17:22] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:04:17:22] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:04:17:22] ENGINE Bus STARTED
+[22/Jun/2019:04:18:49] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:04:18:49] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:04:18:49] ENGINE Bus STOPPING
+[22/Jun/2019:04:18:49] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:04:18:49] ENGINE Bus STOPPED
+[22/Jun/2019:04:18:49] ENGINE Bus EXITING
+[22/Jun/2019:04:18:49] ENGINE Bus EXITED
+[22/Jun/2019:04:18:49] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:04:18:49] ENGINE Re-spawning python app.py
+[22/Jun/2019:04:18:50] ENGINE Listening for SIGTERM.
+[22/Jun/2019:04:18:50] ENGINE Listening for SIGHUP.
+[22/Jun/2019:04:18:50] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:04:18:50] ENGINE Bus STARTING
+[22/Jun/2019:04:18:50] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:04:18:50] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:04:18:50] ENGINE Bus STARTED
+[22/Jun/2019:04:19:19] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2019:04:19:19] ENGINE Bus STOPPING
+[22/Jun/2019:04:19:19] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:04:19:19] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:04:19:19] ENGINE Bus STOPPED
+[22/Jun/2019:04:19:19] ENGINE Bus EXITING
+[22/Jun/2019:04:19:19] ENGINE Bus EXITED
+[22/Jun/2019:04:19:19] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:04:19:23] ENGINE Listening for SIGTERM.
+[22/Jun/2019:04:19:23] ENGINE Listening for SIGHUP.
+[22/Jun/2019:04:19:23] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:04:19:23] ENGINE Bus STARTING
+[22/Jun/2019:04:19:23] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:04:19:24] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:04:19:24] ENGINE Bus STARTED
+[22/Jun/2019:04:21:06] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:04:21:06] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:04:21:06] ENGINE Bus STOPPING
+[22/Jun/2019:04:21:06] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:04:21:06] ENGINE Bus STOPPED
+[22/Jun/2019:04:21:06] ENGINE Bus EXITING
+[22/Jun/2019:04:21:06] ENGINE Bus EXITED
+[22/Jun/2019:04:21:06] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:04:21:06] ENGINE Re-spawning python app.py
+[22/Jun/2019:04:21:07] ENGINE Listening for SIGTERM.
+[22/Jun/2019:04:21:07] ENGINE Listening for SIGHUP.
+[22/Jun/2019:04:21:07] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:04:21:07] ENGINE Bus STARTING
+[22/Jun/2019:04:21:07] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:04:21:07] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:04:21:07] ENGINE Bus STARTED
+[22/Jun/2019:04:21:16] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:04:21:16] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:04:21:16] ENGINE Bus STOPPING
+[22/Jun/2019:04:21:16] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:04:21:16] ENGINE Bus STOPPED
+[22/Jun/2019:04:21:16] ENGINE Bus EXITING
+[22/Jun/2019:04:21:16] ENGINE Bus EXITED
+[22/Jun/2019:04:21:16] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:04:21:16] ENGINE Re-spawning python app.py
+[22/Jun/2019:04:21:18] ENGINE Listening for SIGTERM.
+[22/Jun/2019:04:21:18] ENGINE Listening for SIGHUP.
+[22/Jun/2019:04:21:18] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:04:21:18] ENGINE Bus STARTING
+[22/Jun/2019:04:21:18] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:04:21:18] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:04:21:18] ENGINE Bus STARTED
+[22/Jun/2019:04:23:33] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:04:23:33] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:04:23:33] ENGINE Bus STOPPING
+[22/Jun/2019:04:23:33] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:04:23:33] ENGINE Bus STOPPED
+[22/Jun/2019:04:23:33] ENGINE Bus EXITING
+[22/Jun/2019:04:23:33] ENGINE Bus EXITED
+[22/Jun/2019:04:23:33] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:04:23:33] ENGINE Re-spawning python app.py
+[22/Jun/2019:04:23:57] ENGINE Listening for SIGTERM.
+[22/Jun/2019:04:23:57] ENGINE Listening for SIGHUP.
+[22/Jun/2019:04:23:57] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:04:23:57] ENGINE Bus STARTING
+[22/Jun/2019:04:23:57] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:04:23:57] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:04:23:57] ENGINE Bus STARTED
+[22/Jun/2019:04:24:09] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:04:24:09] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:04:24:09] ENGINE Bus STOPPING
+[22/Jun/2019:04:24:14] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:04:24:14] ENGINE Bus STOPPED
+[22/Jun/2019:04:24:14] ENGINE Bus EXITING
+[22/Jun/2019:04:24:14] ENGINE Bus EXITED
+[22/Jun/2019:04:24:14] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:04:24:14] ENGINE Re-spawning python app.py
+[22/Jun/2019:04:24:15] ENGINE Listening for SIGTERM.
+[22/Jun/2019:04:24:15] ENGINE Listening for SIGHUP.
+[22/Jun/2019:04:24:15] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:04:24:15] ENGINE Bus STARTING
+[22/Jun/2019:04:24:15] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:04:24:16] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:04:24:16] ENGINE Bus STARTED
+[22/Jun/2019:04:24:42] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:04:24:42] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:04:24:42] ENGINE Bus STOPPING
+[22/Jun/2019:04:24:42] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:04:24:42] ENGINE Bus STOPPED
+[22/Jun/2019:04:24:42] ENGINE Bus EXITING
+[22/Jun/2019:04:24:42] ENGINE Bus EXITED
+[22/Jun/2019:04:24:42] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:04:24:42] ENGINE Re-spawning python app.py
+[22/Jun/2019:04:24:43] ENGINE Listening for SIGTERM.
+[22/Jun/2019:04:24:43] ENGINE Listening for SIGHUP.
+[22/Jun/2019:04:24:43] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:04:24:43] ENGINE Bus STARTING
+[22/Jun/2019:04:24:43] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:04:24:43] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:04:24:43] ENGINE Bus STARTED
+[22/Jun/2019:04:39:10] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2019:04:39:10] ENGINE Bus STOPPING
+[22/Jun/2019:04:39:15] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:04:39:15] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:04:39:15] ENGINE Bus STOPPED
+[22/Jun/2019:04:39:15] ENGINE Bus EXITING
+[22/Jun/2019:04:39:15] ENGINE Bus EXITED
+[22/Jun/2019:04:39:15] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:04:39:17] ENGINE Listening for SIGTERM.
+[22/Jun/2019:04:39:17] ENGINE Listening for SIGHUP.
+[22/Jun/2019:04:39:17] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:04:39:17] ENGINE Bus STARTING
+[22/Jun/2019:04:39:17] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:04:39:17] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:04:39:17] ENGINE Bus STARTED
+[22/Jun/2019:04:40:43] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2019:04:40:43] ENGINE Bus STOPPING
+[22/Jun/2019:04:40:48] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:04:40:48] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:04:40:48] ENGINE Bus STOPPED
+[22/Jun/2019:04:40:48] ENGINE Bus EXITING
+[22/Jun/2019:04:40:48] ENGINE Bus EXITED
+[22/Jun/2019:04:40:48] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:04:40:51] ENGINE Listening for SIGTERM.
+[22/Jun/2019:04:40:51] ENGINE Listening for SIGHUP.
+[22/Jun/2019:04:40:51] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:04:40:51] ENGINE Bus STARTING
+[22/Jun/2019:04:40:51] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:04:40:51] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:04:40:51] ENGINE Bus STARTED
+[22/Jun/2019:05:48:48] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:05:48:48] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:05:48:48] ENGINE Bus STOPPING
+[22/Jun/2019:05:48:48] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:05:48:48] ENGINE Bus STOPPED
+[22/Jun/2019:05:48:48] ENGINE Bus EXITING
+[22/Jun/2019:05:48:48] ENGINE Bus EXITED
+[22/Jun/2019:05:48:48] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:05:48:48] ENGINE Re-spawning python app.py
+[22/Jun/2019:05:48:49] ENGINE Listening for SIGTERM.
+[22/Jun/2019:05:48:49] ENGINE Listening for SIGHUP.
+[22/Jun/2019:05:48:49] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:05:48:49] ENGINE Bus STARTING
+[22/Jun/2019:05:48:49] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:05:48:49] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:05:48:49] ENGINE Bus STARTED
+[22/Jun/2019:05:49:03] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2019:05:49:03] ENGINE Bus STOPPING
+[22/Jun/2019:05:49:08] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:05:49:08] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:05:49:08] ENGINE Bus STOPPED
+[22/Jun/2019:05:49:08] ENGINE Bus EXITING
+[22/Jun/2019:05:49:08] ENGINE Bus EXITED
+[22/Jun/2019:05:49:08] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:05:49:09] ENGINE Listening for SIGTERM.
+[22/Jun/2019:05:49:09] ENGINE Listening for SIGHUP.
+[22/Jun/2019:05:49:09] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:05:49:09] ENGINE Bus STARTING
+[22/Jun/2019:05:49:09] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:05:49:10] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:05:49:10] ENGINE Bus STARTED
+[22/Jun/2019:05:50:15] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:05:50:15] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:05:50:15] ENGINE Bus STOPPING
+[22/Jun/2019:05:50:15] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:05:50:15] ENGINE Bus STOPPED
+[22/Jun/2019:05:50:15] ENGINE Bus EXITING
+[22/Jun/2019:05:50:15] ENGINE Bus EXITED
+[22/Jun/2019:05:50:15] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:05:50:15] ENGINE Re-spawning python app.py
+[22/Jun/2019:05:50:16] ENGINE Listening for SIGTERM.
+[22/Jun/2019:05:50:16] ENGINE Listening for SIGHUP.
+[22/Jun/2019:05:50:16] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:05:50:16] ENGINE Bus STARTING
+[22/Jun/2019:05:50:16] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:05:50:16] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:05:50:16] ENGINE Bus STARTED
+[22/Jun/2019:05:50:32] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:05:50:32] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:05:50:32] ENGINE Bus STOPPING
+[22/Jun/2019:05:50:32] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:05:50:32] ENGINE Bus STOPPED
+[22/Jun/2019:05:50:32] ENGINE Bus EXITING
+[22/Jun/2019:05:50:32] ENGINE Bus EXITED
+[22/Jun/2019:05:50:32] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:05:50:32] ENGINE Re-spawning python app.py
+[22/Jun/2019:05:50:33] ENGINE Listening for SIGTERM.
+[22/Jun/2019:05:50:33] ENGINE Listening for SIGHUP.
+[22/Jun/2019:05:50:33] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:05:50:33] ENGINE Bus STARTING
+[22/Jun/2019:05:50:33] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:05:50:34] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:05:50:34] ENGINE Bus STARTED
+[22/Jun/2019:05:52:17] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:05:52:17] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:05:52:17] ENGINE Bus STOPPING
+[22/Jun/2019:05:52:17] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:05:52:17] ENGINE Bus STOPPED
+[22/Jun/2019:05:52:17] ENGINE Bus EXITING
+[22/Jun/2019:05:52:17] ENGINE Bus EXITED
+[22/Jun/2019:05:52:17] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:05:52:17] ENGINE Re-spawning python app.py
+[22/Jun/2019:05:52:18] ENGINE Listening for SIGTERM.
+[22/Jun/2019:05:52:18] ENGINE Listening for SIGHUP.
+[22/Jun/2019:05:52:18] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:05:52:18] ENGINE Bus STARTING
+[22/Jun/2019:05:52:18] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:05:52:18] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:05:52:18] ENGINE Bus STARTED
+[22/Jun/2019:05:53:47] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:05:53:47] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:05:53:47] ENGINE Bus STOPPING
+[22/Jun/2019:05:53:47] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:05:53:47] ENGINE Bus STOPPED
+[22/Jun/2019:05:53:47] ENGINE Bus EXITING
+[22/Jun/2019:05:53:47] ENGINE Bus EXITED
+[22/Jun/2019:05:53:47] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:05:53:47] ENGINE Re-spawning python app.py
+[22/Jun/2019:05:53:49] ENGINE Listening for SIGTERM.
+[22/Jun/2019:05:53:49] ENGINE Listening for SIGHUP.
+[22/Jun/2019:05:53:49] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:05:53:49] ENGINE Bus STARTING
+[22/Jun/2019:05:53:49] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:05:53:49] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:05:53:49] ENGINE Bus STARTED
+[22/Jun/2019:05:53:53] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:05:53:53] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:05:53:53] ENGINE Bus STOPPING
+[22/Jun/2019:05:53:53] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:05:53:53] ENGINE Bus STOPPED
+[22/Jun/2019:05:53:53] ENGINE Bus EXITING
+[22/Jun/2019:05:53:53] ENGINE Bus EXITED
+[22/Jun/2019:05:53:53] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:05:53:53] ENGINE Re-spawning python app.py
+[22/Jun/2019:05:53:54] ENGINE Listening for SIGTERM.
+[22/Jun/2019:05:53:54] ENGINE Listening for SIGHUP.
+[22/Jun/2019:05:53:54] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:05:53:54] ENGINE Bus STARTING
+[22/Jun/2019:05:53:54] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:05:53:54] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:05:53:54] ENGINE Bus STARTED
+[22/Jun/2019:05:54:12] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2019:05:54:12] ENGINE Bus STOPPING
+[22/Jun/2019:05:54:17] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:05:54:17] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:05:54:17] ENGINE Bus STOPPED
+[22/Jun/2019:05:54:17] ENGINE Bus EXITING
+[22/Jun/2019:05:54:17] ENGINE Bus EXITED
+[22/Jun/2019:05:54:17] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:05:54:19] ENGINE Listening for SIGTERM.
+[22/Jun/2019:05:54:19] ENGINE Listening for SIGHUP.
+[22/Jun/2019:05:54:19] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:05:54:19] ENGINE Bus STARTING
+[22/Jun/2019:05:54:19] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:05:54:19] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:05:54:19] ENGINE Bus STARTED
+[22/Jun/2019:05:56:14] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:05:56:14] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:05:56:14] ENGINE Bus STOPPING
+[22/Jun/2019:05:56:14] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:05:56:14] ENGINE Bus STOPPED
+[22/Jun/2019:05:56:14] ENGINE Bus EXITING
+[22/Jun/2019:05:56:14] ENGINE Bus EXITED
+[22/Jun/2019:05:56:14] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:05:56:14] ENGINE Re-spawning python app.py
+[22/Jun/2019:05:56:15] ENGINE Listening for SIGTERM.
+[22/Jun/2019:05:56:15] ENGINE Listening for SIGHUP.
+[22/Jun/2019:05:56:15] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:05:56:15] ENGINE Bus STARTING
+[22/Jun/2019:05:56:15] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:05:56:15] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:05:56:15] ENGINE Bus STARTED
+[22/Jun/2019:05:56:45] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:05:56:45] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:05:56:45] ENGINE Bus STOPPING
+[22/Jun/2019:05:56:45] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:05:56:45] ENGINE Bus STOPPED
+[22/Jun/2019:05:56:45] ENGINE Bus EXITING
+[22/Jun/2019:05:56:45] ENGINE Bus EXITED
+[22/Jun/2019:05:56:45] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:05:56:45] ENGINE Re-spawning python app.py
+[22/Jun/2019:05:56:47] ENGINE Listening for SIGTERM.
+[22/Jun/2019:05:56:47] ENGINE Listening for SIGHUP.
+[22/Jun/2019:05:56:47] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:05:56:47] ENGINE Bus STARTING
+[22/Jun/2019:05:56:47] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:05:56:47] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:05:56:47] ENGINE Bus STARTED
+[22/Jun/2019:05:56:53] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2019:05:56:53] ENGINE Bus STOPPING
+[22/Jun/2019:05:56:58] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:05:56:58] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:05:56:58] ENGINE Bus STOPPED
+[22/Jun/2019:05:56:58] ENGINE Bus EXITING
+[22/Jun/2019:05:56:58] ENGINE Bus EXITED
+[22/Jun/2019:05:56:58] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:05:57:00] ENGINE Listening for SIGTERM.
+[22/Jun/2019:05:57:00] ENGINE Listening for SIGHUP.
+[22/Jun/2019:05:57:00] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:05:57:00] ENGINE Bus STARTING
+[22/Jun/2019:05:57:00] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:05:57:00] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:05:57:00] ENGINE Bus STARTED
+[22/Jun/2019:05:57:57] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:05:57:57] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:05:57:57] ENGINE Bus STOPPING
+[22/Jun/2019:05:57:57] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:05:57:57] ENGINE Bus STOPPED
+[22/Jun/2019:05:57:57] ENGINE Bus EXITING
+[22/Jun/2019:05:57:57] ENGINE Bus EXITED
+[22/Jun/2019:05:57:57] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:05:57:57] ENGINE Re-spawning python app.py
+[22/Jun/2019:05:57:58] ENGINE Listening for SIGTERM.
+[22/Jun/2019:05:57:58] ENGINE Listening for SIGHUP.
+[22/Jun/2019:05:57:58] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:05:57:58] ENGINE Bus STARTING
+[22/Jun/2019:05:57:58] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:05:57:58] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:05:57:58] ENGINE Bus STARTED
+[22/Jun/2019:05:59:19] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:05:59:19] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:05:59:19] ENGINE Bus STOPPING
+[22/Jun/2019:05:59:19] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:05:59:19] ENGINE Bus STOPPED
+[22/Jun/2019:05:59:19] ENGINE Bus EXITING
+[22/Jun/2019:05:59:19] ENGINE Bus EXITED
+[22/Jun/2019:05:59:19] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:05:59:19] ENGINE Re-spawning python app.py
+[22/Jun/2019:05:59:21] ENGINE Listening for SIGTERM.
+[22/Jun/2019:05:59:21] ENGINE Listening for SIGHUP.
+[22/Jun/2019:05:59:21] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:05:59:21] ENGINE Bus STARTING
+[22/Jun/2019:05:59:21] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:05:59:21] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:05:59:21] ENGINE Bus STARTED
+[22/Jun/2019:06:05:28] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:05:28] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:05:28] ENGINE Bus STOPPING
+[22/Jun/2019:06:05:28] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:05:28] ENGINE Bus STOPPED
+[22/Jun/2019:06:05:28] ENGINE Bus EXITING
+[22/Jun/2019:06:05:28] ENGINE Bus EXITED
+[22/Jun/2019:06:05:28] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:05:28] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:05:29] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:05:29] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:05:29] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:05:29] ENGINE Bus STARTING
+[22/Jun/2019:06:05:29] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:05:29] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:05:29] ENGINE Bus STARTED
+[22/Jun/2019:06:05:50] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:05:50] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:05:50] ENGINE Bus STOPPING
+[22/Jun/2019:06:05:50] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:05:50] ENGINE Bus STOPPED
+[22/Jun/2019:06:05:50] ENGINE Bus EXITING
+[22/Jun/2019:06:05:50] ENGINE Bus EXITED
+[22/Jun/2019:06:05:50] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:05:50] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:05:52] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:05:52] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:05:52] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:05:52] ENGINE Bus STARTING
+[22/Jun/2019:06:05:52] ENGINE Error in 'start' listener <cherrypy._cpchecker.Checker object at 0x7f0d0c53f7f0>
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/site-packages/cherrypy/process/wspbus.py", line 230, in publish
+    output.append(listener(*args, **kwargs))
+  File "/usr/lib/python3.7/site-packages/cherrypy/_cpchecker.py", line 40, in __call__
+    method()
+  File "/usr/lib/python3.7/site-packages/cherrypy/_cpchecker.py", line 133, in check_static_paths
+    request.get_resource(section + '/dummy.html')
+  File "/usr/lib/python3.7/site-packages/cherrypy/_cprequest.py", line 749, in get_resource
+    dispatch(path)
+  File "/usr/lib/python3.7/site-packages/cherrypy/_cpdispatch.py", line 289, in __call__
+    func, vpath = self.find_handler(path_info)
+  File "/usr/lib/python3.7/site-packages/cherrypy/_cpdispatch.py", line 367, in find_handler
+    '{0} in {1}'.format(name, fullpath)
+cherrypy._cperror.CherryPyException: A vpath segment was added.  Custom dispatchers may only remove elements.  While trying to process global in ['global', 'dummy.html', 'index']
+
+[22/Jun/2019:06:05:52] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:05:52] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:05:52] ENGINE Shutting down due to error in start listener:
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/site-packages/cherrypy/process/wspbus.py", line 268, in start
+    self.publish('start')
+  File "/usr/lib/python3.7/site-packages/cherrypy/process/wspbus.py", line 248, in publish
+    raise exc
+cherrypy.process.wspbus.ChannelFailures: CherryPyException("A vpath segment was added.  Custom dispatchers may only remove elements.  While trying to process global in ['global', 'dummy.html', 'index']")
+
+[22/Jun/2019:06:05:52] ENGINE Bus STOPPING
+[22/Jun/2019:06:05:57] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:05:57] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:05:57] ENGINE Bus STOPPED
+[22/Jun/2019:06:05:57] ENGINE Bus EXITING
+[22/Jun/2019:06:05:57] ENGINE Bus EXITED
+[22/Jun/2019:06:06:31] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:06:31] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:06:31] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:06:31] ENGINE Bus STARTING
+[22/Jun/2019:06:06:31] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:06:31] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:06:31] ENGINE Bus STARTED
+[22/Jun/2019:06:06:56] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:06:56] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:06:56] ENGINE Bus STOPPING
+[22/Jun/2019:06:06:56] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:06:56] ENGINE Bus STOPPED
+[22/Jun/2019:06:06:56] ENGINE Bus EXITING
+[22/Jun/2019:06:06:56] ENGINE Bus EXITED
+[22/Jun/2019:06:06:56] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:06:56] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:06:57] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:06:57] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:06:57] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:06:57] ENGINE Bus STARTING
+[22/Jun/2019:06:06:57] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:06:58] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:06:58] ENGINE Bus STARTED
+[22/Jun/2019:06:07:04] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:07:04] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:07:04] ENGINE Bus STOPPING
+[22/Jun/2019:06:07:04] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:07:04] ENGINE Bus STOPPED
+[22/Jun/2019:06:07:04] ENGINE Bus EXITING
+[22/Jun/2019:06:07:04] ENGINE Bus EXITED
+[22/Jun/2019:06:07:04] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:07:04] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:07:05] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:07:05] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:07:05] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:07:05] ENGINE Bus STARTING
+[22/Jun/2019:06:07:05] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:07:05] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:07:05] ENGINE Bus STARTED
+[22/Jun/2019:06:08:34] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:08:34] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:08:34] ENGINE Bus STOPPING
+[22/Jun/2019:06:08:34] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:08:34] ENGINE Bus STOPPED
+[22/Jun/2019:06:08:34] ENGINE Bus EXITING
+[22/Jun/2019:06:08:34] ENGINE Bus EXITED
+[22/Jun/2019:06:08:34] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:08:34] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:08:36] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:08:36] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:08:36] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:08:36] ENGINE Bus STARTING
+[22/Jun/2019:06:08:36] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:08:36] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:08:36] ENGINE Bus STARTED
+[22/Jun/2019:06:08:50] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:08:50] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:08:50] ENGINE Bus STOPPING
+[22/Jun/2019:06:08:50] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:08:50] ENGINE Bus STOPPED
+[22/Jun/2019:06:08:50] ENGINE Bus EXITING
+[22/Jun/2019:06:08:50] ENGINE Bus EXITED
+[22/Jun/2019:06:08:50] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:08:50] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:08:51] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:08:51] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:08:51] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:08:51] ENGINE Bus STARTING
+[22/Jun/2019:06:08:51] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:08:51] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:08:51] ENGINE Bus STARTED
+[22/Jun/2019:06:09:15] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:09:15] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:09:15] ENGINE Bus STOPPING
+[22/Jun/2019:06:09:15] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:09:15] ENGINE Bus STOPPED
+[22/Jun/2019:06:09:15] ENGINE Bus EXITING
+[22/Jun/2019:06:09:15] ENGINE Bus EXITED
+[22/Jun/2019:06:09:15] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:09:15] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:09:17] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:09:17] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:09:17] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:09:17] ENGINE Bus STARTING
+[22/Jun/2019:06:09:17] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:09:17] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:09:17] ENGINE Bus STARTED
+[22/Jun/2019:06:09:21] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:09:21] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:09:21] ENGINE Bus STOPPING
+[22/Jun/2019:06:09:21] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:09:21] ENGINE Bus STOPPED
+[22/Jun/2019:06:09:21] ENGINE Bus EXITING
+[22/Jun/2019:06:09:21] ENGINE Bus EXITED
+[22/Jun/2019:06:09:21] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:09:21] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:09:22] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:09:22] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:09:22] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:09:22] ENGINE Bus STARTING
+[22/Jun/2019:06:09:22] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:09:22] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:09:22] ENGINE Bus STARTED
+[22/Jun/2019:06:11:52] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:11:52] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:11:52] ENGINE Bus STOPPING
+[22/Jun/2019:06:11:52] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:11:52] ENGINE Bus STOPPED
+[22/Jun/2019:06:11:52] ENGINE Bus EXITING
+[22/Jun/2019:06:11:52] ENGINE Bus EXITED
+[22/Jun/2019:06:11:52] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:11:52] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:11:54] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:11:54] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:11:54] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:11:54] ENGINE Bus STARTING
+[22/Jun/2019:06:11:54] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:11:54] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:11:54] ENGINE Bus STARTED
+[22/Jun/2019:06:11:58] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2019:06:11:58] ENGINE Bus STOPPING
+[22/Jun/2019:06:11:58] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:11:58] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:11:58] ENGINE Bus STOPPED
+[22/Jun/2019:06:11:58] ENGINE Bus EXITING
+[22/Jun/2019:06:11:58] ENGINE Bus EXITED
+[22/Jun/2019:06:11:58] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:11:59] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:11:59] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:11:59] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:11:59] ENGINE Bus STARTING
+[22/Jun/2019:06:11:59] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:11:59] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:11:59] ENGINE Bus STARTED
+[22/Jun/2019:06:13:12] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:13:12] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:13:12] ENGINE Bus STOPPING
+[22/Jun/2019:06:13:12] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:13:12] ENGINE Bus STOPPED
+[22/Jun/2019:06:13:12] ENGINE Bus EXITING
+[22/Jun/2019:06:13:12] ENGINE Bus EXITED
+[22/Jun/2019:06:13:12] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:13:12] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:13:13] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:13:13] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:13:13] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:13:13] ENGINE Bus STARTING
+[22/Jun/2019:06:13:13] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:13:14] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:13:14] ENGINE Bus STARTED
+[22/Jun/2019:06:14:22] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:14:22] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:14:22] ENGINE Bus STOPPING
+[22/Jun/2019:06:14:22] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:14:22] ENGINE Bus STOPPED
+[22/Jun/2019:06:14:22] ENGINE Bus EXITING
+[22/Jun/2019:06:14:22] ENGINE Bus EXITED
+[22/Jun/2019:06:14:22] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:14:22] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:14:23] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:14:23] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:14:23] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:14:23] ENGINE Bus STARTING
+[22/Jun/2019:06:14:23] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:14:23] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:14:23] ENGINE Bus STARTED
+[22/Jun/2019:06:14:40] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:14:40] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:14:40] ENGINE Bus STOPPING
+[22/Jun/2019:06:14:41] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:14:41] ENGINE Bus STOPPED
+[22/Jun/2019:06:14:41] ENGINE Bus EXITING
+[22/Jun/2019:06:14:41] ENGINE Bus EXITED
+[22/Jun/2019:06:14:41] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:14:41] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:14:42] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:14:42] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:14:42] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:14:42] ENGINE Bus STARTING
+[22/Jun/2019:06:14:42] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:14:42] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:14:42] ENGINE Bus STARTED
+[22/Jun/2019:06:14:49] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:14:49] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:14:49] ENGINE Bus STOPPING
+[22/Jun/2019:06:14:54] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:14:54] ENGINE Bus STOPPED
+[22/Jun/2019:06:14:54] ENGINE Bus EXITING
+[22/Jun/2019:06:14:54] ENGINE Bus EXITED
+[22/Jun/2019:06:14:54] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:14:54] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:14:56] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:14:56] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:14:56] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:14:56] ENGINE Bus STARTING
+[22/Jun/2019:06:14:56] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:14:56] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:14:56] ENGINE Bus STARTED
+[22/Jun/2019:06:16:47] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:16:47] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:16:47] ENGINE Bus STOPPING
+[22/Jun/2019:06:16:47] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:16:47] ENGINE Bus STOPPED
+[22/Jun/2019:06:16:47] ENGINE Bus EXITING
+[22/Jun/2019:06:16:47] ENGINE Bus EXITED
+[22/Jun/2019:06:16:47] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:16:47] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:16:48] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:16:48] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:16:48] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:16:48] ENGINE Bus STARTING
+[22/Jun/2019:06:16:48] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:16:48] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:16:48] ENGINE Bus STARTED
+[22/Jun/2019:06:17:59] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:17:59] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:17:59] ENGINE Bus STOPPING
+[22/Jun/2019:06:17:59] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:17:59] ENGINE Bus STOPPED
+[22/Jun/2019:06:17:59] ENGINE Bus EXITING
+[22/Jun/2019:06:17:59] ENGINE Bus EXITED
+[22/Jun/2019:06:17:59] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:17:59] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:18:00] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:18:00] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:18:00] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:18:00] ENGINE Bus STARTING
+[22/Jun/2019:06:18:00] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:18:00] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:18:00] ENGINE Bus STARTED
+[22/Jun/2019:06:18:35] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:18:35] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:18:35] ENGINE Bus STOPPING
+[22/Jun/2019:06:18:35] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:18:35] ENGINE Bus STOPPED
+[22/Jun/2019:06:18:35] ENGINE Bus EXITING
+[22/Jun/2019:06:18:35] ENGINE Bus EXITED
+[22/Jun/2019:06:18:35] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:18:35] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:18:37] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:18:37] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:18:37] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:18:37] ENGINE Bus STARTING
+[22/Jun/2019:06:18:37] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:18:37] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:18:37] ENGINE Bus STARTED
+[22/Jun/2019:06:18:47] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:18:47] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:18:47] ENGINE Bus STOPPING
+[22/Jun/2019:06:18:51] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:18:51] ENGINE Bus STOPPED
+[22/Jun/2019:06:18:51] ENGINE Bus EXITING
+[22/Jun/2019:06:18:51] ENGINE Bus EXITED
+[22/Jun/2019:06:18:51] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:18:51] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:18:53] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:18:53] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:18:53] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:18:53] ENGINE Bus STARTING
+[22/Jun/2019:06:18:53] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:18:53] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:18:53] ENGINE Bus STARTED
+[22/Jun/2019:06:20:29] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:20:29] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:20:29] ENGINE Bus STOPPING
+[22/Jun/2019:06:20:29] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:20:29] ENGINE Bus STOPPED
+[22/Jun/2019:06:20:29] ENGINE Bus EXITING
+[22/Jun/2019:06:20:29] ENGINE Bus EXITED
+[22/Jun/2019:06:20:29] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:20:29] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:20:30] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:20:30] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:20:30] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:20:30] ENGINE Bus STARTING
+[22/Jun/2019:06:20:30] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:20:31] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:20:31] ENGINE Bus STARTED
+[22/Jun/2019:06:21:19] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:21:19] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:21:19] ENGINE Bus STOPPING
+[22/Jun/2019:06:21:19] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:21:19] ENGINE Bus STOPPED
+[22/Jun/2019:06:21:19] ENGINE Bus EXITING
+[22/Jun/2019:06:21:19] ENGINE Bus EXITED
+[22/Jun/2019:06:21:19] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:21:19] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:21:20] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:21:20] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:21:20] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:21:20] ENGINE Bus STARTING
+[22/Jun/2019:06:21:20] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:21:20] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:21:20] ENGINE Bus STARTED
+[22/Jun/2019:06:21:44] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:21:44] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:21:44] ENGINE Bus STOPPING
+[22/Jun/2019:06:21:44] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:21:44] ENGINE Bus STOPPED
+[22/Jun/2019:06:21:44] ENGINE Bus EXITING
+[22/Jun/2019:06:21:44] ENGINE Bus EXITED
+[22/Jun/2019:06:21:44] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:21:44] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:21:46] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:21:46] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:21:46] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:21:46] ENGINE Bus STARTING
+[22/Jun/2019:06:21:46] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:21:46] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:21:46] ENGINE Bus STARTED
+[22/Jun/2019:06:23:54] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:23:54] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:23:54] ENGINE Bus STOPPING
+[22/Jun/2019:06:23:54] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:23:54] ENGINE Bus STOPPED
+[22/Jun/2019:06:23:54] ENGINE Bus EXITING
+[22/Jun/2019:06:23:54] ENGINE Bus EXITED
+[22/Jun/2019:06:23:54] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:23:54] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:23:55] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:23:55] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:23:55] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:23:55] ENGINE Bus STARTING
+[22/Jun/2019:06:23:55] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:23:55] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:23:55] ENGINE Bus STARTED
+[22/Jun/2019:06:23:57] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:23:57] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:23:57] ENGINE Bus STOPPING
+[22/Jun/2019:06:23:57] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:23:57] ENGINE Bus STOPPED
+[22/Jun/2019:06:23:57] ENGINE Bus EXITING
+[22/Jun/2019:06:23:57] ENGINE Bus EXITED
+[22/Jun/2019:06:23:57] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:23:57] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:23:59] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:23:59] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:23:59] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:23:59] ENGINE Bus STARTING
+[22/Jun/2019:06:23:59] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:23:59] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:23:59] ENGINE Bus STARTED
+[22/Jun/2019:06:24:36] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:24:36] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:24:36] ENGINE Bus STOPPING
+[22/Jun/2019:06:24:36] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:24:36] ENGINE Bus STOPPED
+[22/Jun/2019:06:24:36] ENGINE Bus EXITING
+[22/Jun/2019:06:24:36] ENGINE Bus EXITED
+[22/Jun/2019:06:24:36] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:24:36] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:24:37] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:24:37] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:24:37] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:24:37] ENGINE Bus STARTING
+[22/Jun/2019:06:24:37] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:24:37] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:24:37] ENGINE Bus STARTED
+[22/Jun/2019:06:24:55] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:24:55] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:24:55] ENGINE Bus STOPPING
+[22/Jun/2019:06:24:56] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:24:56] ENGINE Bus STOPPED
+[22/Jun/2019:06:24:56] ENGINE Bus EXITING
+[22/Jun/2019:06:24:56] ENGINE Bus EXITED
+[22/Jun/2019:06:24:56] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:24:56] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:24:58] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:24:58] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:24:58] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:24:58] ENGINE Bus STARTING
+[22/Jun/2019:06:24:58] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:24:58] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:24:58] ENGINE Bus STARTED
+[22/Jun/2019:06:25:12] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:25:12] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:25:12] ENGINE Bus STOPPING
+[22/Jun/2019:06:25:12] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:25:12] ENGINE Bus STOPPED
+[22/Jun/2019:06:25:12] ENGINE Bus EXITING
+[22/Jun/2019:06:25:12] ENGINE Bus EXITED
+[22/Jun/2019:06:25:12] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:25:12] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:25:13] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:25:13] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:25:13] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:25:13] ENGINE Bus STARTING
+[22/Jun/2019:06:25:13] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:25:13] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:25:13] ENGINE Bus STARTED
+[22/Jun/2019:06:26:27] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:26:27] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:26:27] ENGINE Bus STOPPING
+[22/Jun/2019:06:26:27] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:26:27] ENGINE Bus STOPPED
+[22/Jun/2019:06:26:27] ENGINE Bus EXITING
+[22/Jun/2019:06:26:27] ENGINE Bus EXITED
+[22/Jun/2019:06:26:27] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:26:27] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:26:29] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:26:29] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:26:29] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:26:29] ENGINE Bus STARTING
+[22/Jun/2019:06:26:29] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:26:29] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:26:29] ENGINE Bus STARTED
+[22/Jun/2019:06:27:15] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:27:15] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:27:15] ENGINE Bus STOPPING
+[22/Jun/2019:06:27:15] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:27:15] ENGINE Bus STOPPED
+[22/Jun/2019:06:27:15] ENGINE Bus EXITING
+[22/Jun/2019:06:27:15] ENGINE Bus EXITED
+[22/Jun/2019:06:27:15] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:27:15] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:27:16] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:27:16] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:27:16] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:27:16] ENGINE Bus STARTING
+[22/Jun/2019:06:27:16] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:27:16] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:27:16] ENGINE Bus STARTED
+[22/Jun/2019:06:33:39] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:33:39] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:33:39] ENGINE Bus STOPPING
+[22/Jun/2019:06:33:39] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:33:39] ENGINE Bus STOPPED
+[22/Jun/2019:06:33:39] ENGINE Bus EXITING
+[22/Jun/2019:06:33:39] ENGINE Bus EXITED
+[22/Jun/2019:06:33:40] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:33:40] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:33:41] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:33:41] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:33:41] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:33:41] ENGINE Bus STARTING
+[22/Jun/2019:06:33:41] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:33:41] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:33:41] ENGINE Bus STARTED
+[22/Jun/2019:06:34:17] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:34:17] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:34:17] ENGINE Bus STOPPING
+[22/Jun/2019:06:34:22] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:34:22] ENGINE Bus STOPPED
+[22/Jun/2019:06:34:22] ENGINE Bus EXITING
+[22/Jun/2019:06:34:22] ENGINE Bus EXITED
+[22/Jun/2019:06:34:22] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:34:22] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:34:23] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:34:23] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:34:23] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:34:23] ENGINE Bus STARTING
+[22/Jun/2019:06:34:23] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:34:23] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:34:23] ENGINE Bus STARTED
+[22/Jun/2019:06:37:09] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:37:09] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:37:09] ENGINE Bus STOPPING
+[22/Jun/2019:06:37:09] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:37:09] ENGINE Bus STOPPED
+[22/Jun/2019:06:37:09] ENGINE Bus EXITING
+[22/Jun/2019:06:37:09] ENGINE Bus EXITED
+[22/Jun/2019:06:37:09] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:37:09] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:37:10] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:37:10] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:37:10] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:37:10] ENGINE Bus STARTING
+[22/Jun/2019:06:37:10] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:37:10] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:37:11] ENGINE Bus STARTED
+[22/Jun/2019:06:37:25] ENGINE Restarting because /home/cs/Code/webapps/metamathsearch/app.py changed.
+[22/Jun/2019:06:37:25] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:06:37:25] ENGINE Bus STOPPING
+[22/Jun/2019:06:37:26] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:06:37:26] ENGINE Bus STOPPED
+[22/Jun/2019:06:37:26] ENGINE Bus EXITING
+[22/Jun/2019:06:37:26] ENGINE Bus EXITED
+[22/Jun/2019:06:37:26] ENGINE Waiting for child threads to terminate...
+[22/Jun/2019:06:37:26] ENGINE Re-spawning python app.py
+[22/Jun/2019:06:37:27] ENGINE Listening for SIGTERM.
+[22/Jun/2019:06:37:27] ENGINE Listening for SIGHUP.
+[22/Jun/2019:06:37:27] ENGINE Listening for SIGUSR1.
+[22/Jun/2019:06:37:27] ENGINE Bus STARTING
+[22/Jun/2019:06:37:27] ENGINE Started monitor thread 'Autoreloader'.
+[22/Jun/2019:06:37:28] ENGINE Serving on http://0.0.0.0:5000
+[22/Jun/2019:06:37:28] ENGINE Bus STARTED
+[22/Jun/2019:07:23:59] ENGINE Keyboard Interrupt: shutting down bus
+[22/Jun/2019:07:23:59] ENGINE Bus STOPPING
+[22/Jun/2019:07:24:03] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('0.0.0.0', 5000)) shut down
+[22/Jun/2019:07:24:03] ENGINE Stopped thread 'Autoreloader'.
+[22/Jun/2019:07:24:03] ENGINE Bus STOPPED
+[22/Jun/2019:07:24:03] ENGINE Bus EXITING
+[22/Jun/2019:07:24:03] ENGINE Bus EXITED
+[22/Jun/2019:07:24:03] ENGINE Waiting for child threads to terminate...

@@ -1,0 +1,146 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/docs/4.0/assets/img/favicons/favicon.ico"> -->
+
+    <title>Fixed top navbar example for Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/navbar-fixed/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <!-- <link href="navbar-top-fixed.css" rel="stylesheet"> -->
+    <style>
+      body {
+        min-height: 5rem;
+        padding-top: 4.5rem;
+      }
+      .jumbotron{background-color:#eee; padding:1em;}
+      .name{font-size:2em;display:inline-block;}
+      .contrib{display:inline-block; float:right; margin-top:1em; color:#999}
+      .comment{margin-top:1em;margin-bottom:5em;}
+      .statement{margin-top:1em;}
+      .heading{display:inline-block; float:right;color:#999;margin-left:1em;}
+      td{padding:3px;}
+    </style>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">MetaMathSearch</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <!-- <ul class="navbar-nav mr-auto">
+          <li class="nav-theorem active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-theorem">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-theorem">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul> -->
+        <input id="searchInput" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      </div>
+    </nav>
+    <div id="theorem">
+      <main role="main" id="loadingDiv" class="container">
+        <div class="jumbotron">
+          <div class="info">Loading...</div>
+        </div>
+      </main>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/3cb437ac97.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elasticsearch/16.0.0/elasticsearch.jquery.min.js"></script>
+
+    <script>
+    function copyStringToClipboard (str) {
+       // Create new element
+       var el = document.createElement('textarea');
+       // Set value (string to be copied)
+       el.value = str;
+       // Set non-editable to avoid focus and move outside of view
+       el.setAttribute('readonly', '');
+       el.style = {position: 'absolute', left: '-9999px'};
+       document.body.appendChild(el);
+       // Select text inside element
+       el.select();
+       // Copy text to clipboard
+       document.execCommand('copy');
+       // Remove temporary element
+       document.body.removeChild(el);
+    }
+    var client = new $.es.Client({
+      hosts: 'https://public:public@f0a0721cc7aa468ea5ee667f7322e731.eu-west-1.aws.found.io:9243'
+    });
+    // function addDiv(html) {
+    //   $(div).attr("class","section")
+    //   $(div).find("th").remove()
+    //   $(div).find("caption").remove()
+    // }
+    label = window.location.pathname.split(".html")[0].split("/").pop()
+    client.get({
+      index:"metamath",
+      id:label,
+    }).then(function (resp) {
+      $("#loadingDiv").remove()
+      var theorem = resp._source;
+      if (theorem) {
+        date = new Date(theorem["date"])
+        div = document.createElement('div')
+        div.innerHTML = `
+        <main role="main" class="container">
+          <div style="margin-top:3em">
+            `+`<div class="name"><h1>`+theorem["name"]+`</h1></div>`+`
+            `+(theorem["contributor"]?`<div class="contrib"><i>`+theorem["contributor"]+` `+date.getDate()+"/"+(parseInt(date.getMonth())+1)+"/"+date.getFullYear()+`</i></div>`:"")+`
+          </div>
+
+          `+(theorem["html"]["comment"]?`<div class="comment">`+theorem["html"]["comment"]+`</div>`:"")+`
+          </main>
+          `+(theorem["html"]["hypotheses"]?`<div class="jumbotron"><div class="heading"><h6>Hypotheses</h6></div>`+theorem["html"]["hypotheses"]+`</div>`:"")+`
+          `+(theorem["html"]["statement"]?`<div class="jumbotron statement"><div class="heading"><h6>Statement</h6></div>`+theorem["html"]["statement"]+`</div>`:"")+`
+          `+(theorem["html"]["proof"]?`<div class="jumbotron proof"><div class="heading"><h6>Proof</h6></div>`+theorem["html"]["proof"]+`</div>`:"")+`
+          `+(theorem["html"]["syntaxHints"]?`<div class="jumbotron syntaxHints"><div class="heading"><h6>Syntax Hints</h6></div>`+theorem["html"]["syntaxHints"]+`</div>`:"")+`
+          `+(theorem["source"]?`<div class="jumbotron code"><div class="heading"><h6>Code</h6></div><pre style="text-align:center"><code>`+theorem["source"]+`</code></pre></div>`:"")+`
+          `+(theorem["html"]["axioms"]?`<div class="jumbotron axioms"><div class="heading"><h6>Axioms</h6></div>`+theorem["html"]["axioms"]+`</div>`:"")+`
+          `+(theorem["html"]["dependencies"]?`<div class="jumbotron dependencies"><div class="heading"><h6>Dependencies</h6></div>`+theorem["html"]["dependencies"]+`</div>`:"")+`
+          `+(theorem["html"]["usage"]?`<div class="jumbotron usage"><div class="heading"><h6>Usage</h6></div>`+theorem["html"]["usage"]+`</div>`:"")+`
+
+        `
+        $(div).find("th").remove()
+        $(div).find("caption").remove()
+        document.getElementById('theorem').appendChild(div);
+      }
+    }, function (err) {
+      console.trace(err.message);
+    });
+    var input = document.getElementById("searchInput");
+    input.addEventListener("keyup", function(event) {
+      // Number 13 is the "Enter" key on the keyboard
+      if (event.keyCode === 13) {
+        window.location.href = "/?q="+input.value
+      }
+    });
+    </script>
+
+  </body>
+</html>

@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <!-- <link rel="icon" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/docs/4.0/assets/img/favicons/favicon.ico"> -->
 
-    <title>Fixed top navbar example for Bootstrap</title>
+    <title>MetaMathSearch</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/navbar-fixed/">
 
@@ -24,8 +24,8 @@
       }
       .jumbotron{background-color:#eee; margin-left:5%; margin-right:5%; margin-top:2em;padding:1em;border-radius:10px}
       .name{font-size:2em;display:inline-block;margin-left:1em;}
-      .contrib{display:inline-block; float:right; margin-top:1em; color:#aaa}
-      .comment{margin-top:1em;}
+      .contrib{display:inline-block; float:right; margin-top:1em; margin-right:1em;color:#999}
+      .comment{margin-top:1em; margin-bottom:1em;}
       .statement{margin-top:1em;}
       .copy{color:#fff}
       .copyButton{margin-bottom:1em;}
@@ -41,17 +41,6 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <!-- <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul> -->
         <input id="searchInput" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
       </div>
     </nav>
@@ -69,19 +58,13 @@
 
     <script>
       function copyStringToClipboard (str) {
-         // Create new element
          var el = document.createElement('textarea');
-         // Set value (string to be copied)
          el.value = str;
-         // Set non-editable to avoid focus and move outside of view
          el.setAttribute('readonly', '');
          el.style = {position: 'absolute', left: '-9999px'};
          document.body.appendChild(el);
-         // Select text inside element
          el.select();
-         // Copy text to clipboard
          document.execCommand('copy');
-         // Remove temporary element
          document.body.removeChild(el);
       }
       page = 0
@@ -96,6 +79,14 @@
       var client = new $.es.Client({
         hosts: 'https://public:public@f0a0721cc7aa468ea5ee667f7322e731.eu-west-1.aws.found.io:9243'
       });
+      var input = document.getElementById("searchInput");
+      q = new URL(window.location.href).searchParams.get("q")
+      if (q) {
+        input.value = q
+        console.log(q)
+        addResults(q,0)
+      }
+
       function addResults(query, page) {
         window.onscroll = null
         if (query == "" ){
@@ -145,7 +136,8 @@
                   <div class="statement">`+theorem["html"]["statement"]+`</div>
 
                 </div>
-              </main>`
+              </main>
+              `
             document.getElementById('results').appendChild(div);
             $(div).fadeOut(0).delay(delay)
             $(div).fadeIn()
@@ -173,14 +165,11 @@
           console.trace(err.message);
         });
       }
-      // Get the input field
-      var input = document.getElementById("searchInput");
       var inputValue = ""
-      // Execute a function when the user releases a key on the keyboard
       input.addEventListener("keyup", function(event) {
-        // Number 13 is the "Enter" key on the keyboard
         if (event.keyCode === 13) {
           window.scrollTo(0, 0)
+          window.history.pushState({},"","?q="+input.value)
           $('#results').empty()
           page = 0
           inputValue = input.value
