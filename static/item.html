@@ -24,7 +24,7 @@
       }
       .jumbotron{background-color:#eee; padding:1em;}
       .name{font-size:2em;display:inline-block;}
-      .contrib{display:inline-block; float:right; margin-top:1em; color:#999}
+      .contrib{display:inline-block; float:right; margin-top:1em;}
       .comment{margin-top:1em;margin-bottom:5em;}
       .statement{margin-top:1em;}
       .heading{display:inline-block; float:right;color:#999;margin-left:1em;}
@@ -111,7 +111,7 @@
         <main role="main" class="container">
           <div style="margin-top:3em">
             `+`<div class="name"><h1>`+theorem["name"]+`</h1></div>`+`
-            `+(theorem["contributor"]?`<div class="contrib"><i>`+theorem["contributor"]+` `+date.getDate()+"/"+(parseInt(date.getMonth())+1)+"/"+date.getFullYear()+`</i></div>`:"")+`
+            `+(theorem["contributor"]?`<div class="contrib"><i><a href="/?q=`+theorem["contributor"]+`">`+theorem["contributor"]+`</a> `+date.getDate()+"/"+(parseInt(date.getMonth())+1)+"/"+date.getFullYear()+`</i></div>`:"")+`
           </div>
 
           `+(theorem["html"]["comment"]?`<div class="comment">`+theorem["html"]["comment"]+`</div>`:"")+`
