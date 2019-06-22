@@ -7,6 +7,7 @@ import time
 import elasticsearch6
 import dateparser
 import re
+from pprint import pprint
 
 mmExec = sys.argv[1] #first argument must be path to metamath executable
 mmFile = sys.argv[2] #second argument must be path to *.mm file
@@ -14,6 +15,8 @@ esURL = sys.argv[3] #third argument must be elasticsearch url
 command = sys.argv[4] #fourth argument must be command (initialise, add <optional file list, if none adds those which are missing>, delete <file list>, show <optional file list, if none shows all>)
 labels = sys.argv[5:] #fifth argument onwards is optional file list for add, delete, show
 
+if command not in "initialise delete add show".split():
+    quit()
 if command == "delete" and len(labels) == 0:
     quit()
 if command == "initialise" and len(labels) > 0:
@@ -84,11 +87,11 @@ if len(labels) == 0:
 #iterate through labels
 for labelIndex, label in enumerate(labels):
     if command == "add" and es.exists(index="metamath",id=label,doc_type="json"):
-        print("skipping",label,"("+str(labelIndex+1)+"/"+str(len(labels))+")")
+        print("skipped",label,"("+str(labelIndex+1)+"/"+str(len(labels))+")")
         continue
     elif command == "delete":
-        print("deleting",label,"("+str(labelIndex+1)+"/"+str(len(labels))+")")
         es.delete(index="metamath",id=label,doc_type="json")
+        print("deleted",label,"("+str(labelIndex+1)+"/"+str(len(labels))+")")
     else:
         theorem = {"name":label}
 
@@ -118,6 +121,11 @@ for labelIndex, label in enumerate(labels):
         if htmlHypotheses is not None:
             htmlHypotheses.attrs = {}
             theorem["html"]["hypotheses"] = htmlHypotheses.prettify()
+        else:
+            htmlHypotheses = soup.find("table", attrs={"summary":"Hypothesis"})
+            if htmlHypotheses is not None:
+                htmlHypotheses.attrs = {}
+                theorem["html"]["hypotheses"] = htmlHypotheses.prettify()
 
         #add html statement
         htmlStatement = soup.find("table", attrs={"summary": "Assertion"})
@@ -142,14 +150,14 @@ for labelIndex, label in enumerate(labels):
             theorem["usage"] = usage
 
         #add source
-        theorem["source"] = reduceSpacing(mm("show source "+label))
+        theorem["source"] = mm("show source "+label)
 
         #add proof
         proof = mm("show proof "+label)
         if proof.startswith("?There is no $p statement whose label matches"):
             proof = None
         else:
-            theorem["proof"] = reduceSpacing(proof)
+            theorem["proof"] = proof
 
         #get show statement / full
         details = mm("show statement "+label+" / full")
@@ -159,25 +167,23 @@ for labelIndex, label in enumerate(labels):
         theorem["statementNumber"] = statementNumber
 
         #add comment
-        theorem["comment"] = reduceSpacing(details.split(".\n\"")[1].split("\"\n"+statementNumber+" "+label)[0])
+        theorem["comment"] = details.split(".\n\"")[1].split("\"\n"+statementNumber+" "+label)[0]
 
-
-        flatComment = theorem["comment"].replace("\n", " ")
-
-        #add contributor and date
-        if len(flatComment.split("(Contributed by ")) > 1:
-            contributor = flatComment.split("(Contributed by ")[1].split(", ")[0]
+        #add contributor and date, and remove them from description
+        contribString = "\([\n\r\s]{0,}Contributed[\n\r\s]{1,}by[\n\r\s]{1,}"
+        hcom = re.search(contribString+"([^]]+?)\.\)",theorem["html"]["comment"])
+        com = re.search(contribString+"([^]]+?)\.\)",theorem["comment"])
+        if hcom:
+            theorem["html"]["comment"] = re.sub(contribString+"([^]]+?)\.\)","",theorem["html"]["comment"])
+            contribSplit = hcom.group(0).split()
+            date = contribSplit[len(contribSplit)-1].replace(".)","")
+            contributor = " ".join(contribSplit[:len(contribSplit)-1]).replace(",","")
+            contributor = re.sub(contribString,"",contributor)
             theorem["contributor"] = contributor
+            theorem["date"] = dateparser.parse(date)
 
-            date = flatComment.split("(Contributed by "+contributor+", ")[1].split(".)")[0]
-
-            removalString = "\(Contributed[\n\r\s]{1,}by[\n\r\s]{1,}"+contributor.replace(" ","[\n\r\s]{1,}")+"\,[\n\r\s]{1,}"+date+"\.\)"
-            theorem["html"]["comment"] = re.sub(removalString,"",theorem["html"]["comment"])
-            theorem["comment"] = reduceSpacing(re.sub(removalString,"",theorem["comment"]))
-
-            date = dateparser.parse(date)
-            theorem["date"] = date
-
+        if com:
+            theorem["comment"] = re.sub(contribString+"([^]]+?)\.\)","",theorem["comment"])
 
         #add statement, hypotheses, disjointPairs, optionalHypotheses, requiredVariables, allowedVariables, containedVariables
         sectionHeaders = {
@@ -193,7 +199,7 @@ for labelIndex, label in enumerate(labels):
             sections = sections.replace(key, value)
 
         #add statement
-        theorem["statement"] = reduceSpacing(sections.split("\"\n"+statementNumber+" "+label)[1].split("@@@")[0])
+        theorem["statement"] = sections.split("\"\n"+statementNumber+" "+label)[1].split("@@@")[0]
 
         #add optionalHypotheses, requiredVariables, allowedVariables, containedVariables, disjointPairs
         sections = sections.split("@@")
@@ -202,9 +208,7 @@ for labelIndex, label in enumerate(labels):
             split = section.split("~~~")
             key = split[0]
             value = split[1]
-            value = reduceSpacing(value)
             theorem[key] = value
-
 
         #process optionalHypotheses, requiredVariables, allowedVariables, and containedVariables into lists
         for key in ["optionalHypotheses","requiredVariables","allowedVariables","containedVariables"]:
@@ -220,9 +224,14 @@ for labelIndex, label in enumerate(labels):
             for i in range(len(theorem["disjointPairs"])):
                 theorem["disjointPairs"][i] = theorem["disjointPairs"][i].replace("<","").replace(">","").split(",")
 
+        #reduce spacing
+        for key in theorem:
+            if isinstance(theorem[key], str):
+                theorem[key] = reduceSpacing(theorem[key])
+
         #send to elasticsearch
         if command == "add" or command == "initialise":
-            print("adding",label,"("+str(labelIndex+1)+"/"+str(len(labels))+")")
             es.index(index="metamath", doc_type="json", id=label, body=theorem)
+            print("added",label,"("+str(labelIndex+1)+"/"+str(len(labels))+")")
         elif command == "show":
-            print(theorem)
+            pprint(theorem["contributor"])

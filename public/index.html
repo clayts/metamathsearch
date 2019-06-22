@@ -131,11 +131,15 @@
             if (theorem["html"]["hypotheses"]) {
               hypotheses = `<div class="hypotheses">`+theorem["html"]["hypotheses"]+`</div>`
             }
+            contributor = ""
+            if (theorem["contributor"]) {
+              contributor = `<div class="contrib"><i>`+theorem["contributor"]+` `+date.getDate()+"/"+(parseInt(date.getMonth())+1)+"/"+date.getFullYear()+`</i></div>`
+            }
               div.innerHTML =  `
               <main role="main" class="container">
                 <div class="jumbotron">
                   <a class="btn btn-sm btn-primary copyButton" onclick="copyStringToClipboard('`+theorem["name"]+`')" role="button"><span class="fas fa-copy copy"></span></a><div class="name"><a href="`+theorem["name"]+`.html">`+theorem["name"]+`</a></div>
-                  <div class="contrib"><i>`+theorem["contributor"]+` `+date.getDate()+"/"+(parseInt(date.getMonth())+1)+"/"+date.getFullYear()+`</i></div>
+                  `+contributor+`
                   <div class="comment">`+theorem["html"]["comment"]+`</div>
                   `+hypotheses+`
                   <div class="statement">`+theorem["html"]["statement"]+`</div>
