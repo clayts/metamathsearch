@@ -10,7 +10,13 @@
 
     <title>MetaMathSearch</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/navbar-fixed/">
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/navbar-fixed/"> -->
+
+    <meta property="og:url"                content="https://metamathsearch.herokuapp.com/" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="MetaMath Seach Engine" />
+    <meta property="og:description"        content="A search engine for the file  set.mm from the MetaMath project." />
+    <meta property="og:image"              content="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Aleph0.svg/1200px-Aleph0.svg.png" />
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -79,13 +85,17 @@
       var client = new $.es.Client({
         hosts: 'https://public:public@f0a0721cc7aa468ea5ee667f7322e731.eu-west-1.aws.found.io:9243'
       });
+      var inputValue = ""
       var input = document.getElementById("searchInput");
+      contribQuery = new URL(window.location.href).searchParams.get("c")
       q = new URL(window.location.href).searchParams.get("q")
       if (q) {
         input.value = q
+        inputValue = q
         console.log(q)
         addResults(q,0)
       }
+
 
       function addResults(query, page) {
         window.onscroll = null
@@ -101,17 +111,34 @@
         </main>
         `
         document.getElementById('results').appendChild(loadingDiv);
-        client.search({
-          index: 'metamath',
-          body: {
-            from: page*10, size: 10,
-            query: {
-              simple_query_string: {
-               query: query
+        searchParams = {}
+        if (contribQuery) {
+          searchParams = {
+            index: 'metamath',
+            body: {
+              from: page*10, size: 10,
+              query: {
+                simple_query_string: {
+                 fields: ["contributor"],
+                 query: query,
+                }
               }
             }
           }
-        }).then(function (resp) {
+        } else {
+          searchParams = {
+            index: 'metamath',
+            body: {
+              from: page*10, size: 10,
+              query: {
+                simple_query_string: {
+                 query: query
+                }
+              }
+            }
+          }
+        }
+        client.search(searchParams).then(function (resp) {
           var hits = resp.hits.hits;
           delay = 0
           hits.forEach(function(hit) {
@@ -124,7 +151,7 @@
             }
             contributor = ""
             if (theorem["contributor"]) {
-              contributor = `<div class="contrib"><i><a href="/?q=`+theorem["contributor"]+`">`+theorem["contributor"]+`</a> `+date.getDate()+"/"+(parseInt(date.getMonth())+1)+"/"+date.getFullYear()+`</i></div>`
+              contributor = `<div class="contrib"><i><a href="/?q=`+theorem["contributor"]+`&c=true">`+theorem["contributor"]+`</a> `+date.getDate()+"/"+(parseInt(date.getMonth())+1)+"/"+date.getFullYear()+`</i></div>`
             }
               div.innerHTML =  `
               <main role="main" class="container">
@@ -165,7 +192,6 @@
           console.trace(err.message);
         });
       }
-      var inputValue = ""
       input.addEventListener("keyup", function(event) {
         if (event.keyCode === 13) {
           window.scrollTo(0, 0)

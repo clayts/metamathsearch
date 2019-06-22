@@ -10,7 +10,7 @@
 
     <title>MetaMathSearch</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/navbar-fixed/">
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/navbar-fixed/"> -->
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -111,7 +111,7 @@
         <main role="main" class="container">
           <div style="margin-top:3em">
             `+`<div class="name"><h1>`+theorem["name"]+`</h1></div>`+`
-            `+(theorem["contributor"]?`<div class="contrib"><i><a href="/?q=`+theorem["contributor"]+`">`+theorem["contributor"]+`</a> `+date.getDate()+"/"+(parseInt(date.getMonth())+1)+"/"+date.getFullYear()+`</i></div>`:"")+`
+            `+(theorem["contributor"]?`<div class="contrib"><i><a href="/?q=`+theorem["contributor"]+`&c=true">`+theorem["contributor"]+`</a> `+date.getDate()+"/"+(parseInt(date.getMonth())+1)+"/"+date.getFullYear()+`</i></div>`:"")+`
           </div>
 
           `+(theorem["html"]["comment"]?`<div class="comment">`+theorem["html"]["comment"]+`</div>`:"")+`
