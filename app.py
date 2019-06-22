@@ -8,7 +8,7 @@ class Search:
         return self.items.item
 
     @cherrypy.expose
-    def index(self,q=None):
+    def index(self,q=None,field=None):
         return open('static/index.html').read()
 
 class Item:
