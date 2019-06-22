@@ -8,14 +8,14 @@
     <meta name="author" content="">
     <!-- <link rel="icon" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/docs/4.0/assets/img/favicons/favicon.ico"> -->
 
-    <title>MetaMathSearch</title>
+    <title>MetamathSearch</title>
 
     <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/navbar-fixed/"> -->
 
     <meta property="og:url"                content="https://metamathsearch.herokuapp.com/" />
     <meta property="og:type"               content="website" />
-    <meta property="og:title"              content="MetaMath Seach Engine" />
-    <meta property="og:description"        content="A search engine for the file  set.mm from the MetaMath project." />
+    <meta property="og:title"              content="MetamathSeach" />
+    <meta property="og:description"        content="A search engine for the file  set.mm from the Metamath project." />
     <meta property="og:image"              content="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Aleph0.svg/1200px-Aleph0.svg.png" />
 
     <!-- Bootstrap core CSS -->
@@ -42,7 +42,7 @@
   <body>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">MetaMathSearch</a>
+      <a class="navbar-brand" href="#">MetamathSearch</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -51,6 +51,13 @@
       </div>
     </nav>
     <div id="results">
+      <main role="main" class="container">
+  <div class="jumbotron">
+    <div class="welcome" style="text-align:center"><h1>Welcome to MetamathSearch</h1></div>
+    <div class="instructions">This site is a work in progress. Please submit feature requests and report bugs on the project's <a href="https://github.com/clayts/metamathsearch">GitHub</a> page. For more information about Metamath please vist the <a href="http://us.metamath.org/index.html">Metamath Website</a>.<p>Usage:</p><ul><li>Type in the box at the top and press enter to search <code>set.mm</code></li><li>Click on the <span style="color:#000" class="fas fa-copy copy"></span> button to copy the theorem name</li><li>Click on a theorem's name to see more information</li><li>Click on a contributor's name to see their other contributions</li><li>...</li></ul></div>
+    <div class="credits">by <a href="mailto:clayton.spicer@gmail.com">Clayton Spicer</a> and Jon Pennant.</div>
+  </div>
+</main>
     </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -93,6 +100,7 @@
         input.value = q
         inputValue = q
         console.log(q)
+        $('#results').empty()
         addResults(q,0)
       }
 
