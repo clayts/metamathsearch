@@ -229,9 +229,13 @@ for labelIndex, label in enumerate(labels):
             if isinstance(theorem[key], str):
                 theorem[key] = reduceSpacing(theorem[key])
 
+        #clear empties
+        theorem = {k:v for k,v in theorem.items() if v != None}
+        theorem["html"] = {k:v for k,v in theorem["html"].items() if v != None}
+
         #send to elasticsearch
         if command == "add" or command == "initialise":
             es.index(index="metamath", doc_type="json", id=label, body=theorem)
             print("added",label,"("+str(labelIndex+1)+"/"+str(len(labels))+")")
         elif command == "show":
-            pprint(theorem["contributor"])
+            pprint(theorem)
