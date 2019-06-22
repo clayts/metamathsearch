@@ -124,7 +124,7 @@
             }
             contributor = ""
             if (theorem["contributor"]) {
-              contributor = `<div class="contrib"><i>`+theorem["contributor"]+` `+date.getDate()+"/"+(parseInt(date.getMonth())+1)+"/"+date.getFullYear()+`</i></div>`
+              contributor = `<div class="contrib"><i><a href="/?=`+theorem["contributor"]+`">`+theorem["contributor"]+`</a> `+date.getDate()+"/"+(parseInt(date.getMonth())+1)+"/"+date.getFullYear()+`</i></div>`
             }
               div.innerHTML =  `
               <main role="main" class="container">
