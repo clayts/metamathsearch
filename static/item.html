@@ -111,7 +111,7 @@
         <main role="main" class="container">
           <div style="margin-top:3em">
             `+`<div class="name"><h1>`+theorem["name"]+`</h1></div>`+`
-            `+(theorem["contributor"]?`<div class="contrib"><i><a href="/?q=`+theorem["contributor"]+`&c=true">`+theorem["contributor"]+`</a> `+date.getDate()+"/"+(parseInt(date.getMonth())+1)+"/"+date.getFullYear()+`</i></div>`:"")+`
+            `+(theorem["contributor"]?`<div class="contrib"><i><a href="/?q=`+theorem["contributor"]+`&field=contributor">`+theorem["contributor"]+`</a> `+date.getDate()+"/"+(parseInt(date.getMonth())+1)+"/"+date.getFullYear()+`</i></div>`:"")+`
           </div>
 
           `+(theorem["html"]["comment"]?`<div class="comment">`+theorem["html"]["comment"]+`</div>`:"")+`

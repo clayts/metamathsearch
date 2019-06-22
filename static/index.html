@@ -87,7 +87,7 @@
       });
       var inputValue = ""
       var input = document.getElementById("searchInput");
-      contribQuery = new URL(window.location.href).searchParams.get("c")
+      field = new URL(window.location.href).searchParams.get("field")
       q = new URL(window.location.href).searchParams.get("q")
       if (q) {
         input.value = q
@@ -111,32 +111,19 @@
         </main>
         `
         document.getElementById('results').appendChild(loadingDiv);
-        searchParams = {}
-        if (contribQuery) {
-          searchParams = {
-            index: 'metamath',
-            body: {
-              from: page*10, size: 10,
-              query: {
-                simple_query_string: {
-                 fields: ["contributor"],
-                 query: query,
-                }
+        searchParams = {
+          index: 'metamath',
+          body: {
+            from: page*10, size: 10,
+            query: {
+              simple_query_string: {
+               query: query,
               }
             }
           }
-        } else {
-          searchParams = {
-            index: 'metamath',
-            body: {
-              from: page*10, size: 10,
-              query: {
-                simple_query_string: {
-                 query: query
-                }
-              }
-            }
-          }
+        }
+        if (field) {
+          searchParams.body.query.simple_query_string.fields=[field]
         }
         client.search(searchParams).then(function (resp) {
           var hits = resp.hits.hits;
@@ -151,7 +138,7 @@
             }
             contributor = ""
             if (theorem["contributor"]) {
-              contributor = `<div class="contrib"><i><a href="/?q=`+theorem["contributor"]+`&c=true">`+theorem["contributor"]+`</a> `+date.getDate()+"/"+(parseInt(date.getMonth())+1)+"/"+date.getFullYear()+`</i></div>`
+              contributor = `<div class="contrib"><i><a href="/?q=`+theorem["contributor"]+`&field=contributor">`+theorem["contributor"]+`</a> `+date.getDate()+"/"+(parseInt(date.getMonth())+1)+"/"+date.getFullYear()+`</i></div>`
             }
               div.innerHTML =  `
               <main role="main" class="container">
