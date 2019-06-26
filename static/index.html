@@ -95,17 +95,17 @@
       var inputValue = ""
       var input = document.getElementById("searchInput");
       field = new URL(window.location.href).searchParams.get("field")
-      q = new URL(window.location.href).searchParams.get("q")
+      q = new URL(window.location.href.replace(/\+/g, '%2B')).searchParams.get("q")
       if (q) {
         input.value = q
         inputValue = q
-        console.log(q)
         $('#results').empty()
         addResults(q,0)
       }
 
 
       function addResults(query, page) {
+        console.log("searching: ",query)
         window.onscroll = null
         if (query == "" ){
           return
@@ -120,13 +120,57 @@
         `
         document.getElementById('results').appendChild(loadingDiv);
         searchParams = {
-          index: 'metamath',
+          index: 'metamath-v2',
           body: {
             from: page*10, size: 10,
+            explain: true,
             query: {
-              simple_query_string: {
-               query: query,
-              }
+              //simple_query_string: {
+              //  query: query,
+              //  default_operator: "AND",
+              //}
+              bool: {
+                 should: {
+                   multi_match: {
+                     // type: "best_fields",
+                     query: query,
+                     // default_operator: "AND",
+                     fields: [
+                       "name^4",
+                       // "usage",
+                       "source^2",
+                       "proof^2",
+                       // "statementNumber",
+                       "comment^2",
+                       "contributor",
+                       // "date",
+                       "statement^10",
+                       "hypotheses^2",
+                       // "optionalHypotheses",
+                       // "requiredVariables",
+                       // "allowedVariables",
+                       // "containedVariables",
+                       // "disjointPairs",
+                       "html.comment^2",
+                       "html.comment.metamath^2",
+                       // "html.syntaxHints",
+                       // "html.axioms",
+                       // "html.dependencies",
+                       // "html.usage",
+                       "html.hypotheses^2",
+                       "html.statement^2",
+                       "html.proof^2",
+                     ],
+                     boost: 100,
+                   }
+                 },
+                 filter: {
+                   simple_query_string: {
+                     query: query,
+                     default_operator: "AND",
+                   }
+                 }
+               }
             }
           }
         }
@@ -135,6 +179,7 @@
         }
         client.search(searchParams).then(function (resp) {
           var hits = resp.hits.hits;
+          console.log(resp)
           delay = 0
           hits.forEach(function(hit) {
             theorem = hit._source
@@ -190,7 +235,7 @@
       input.addEventListener("keyup", function(event) {
         if (event.keyCode === 13) {
           window.scrollTo(0, 0)
-          window.history.pushState({},"","?q="+input.value)
+          window.history.pushState({},"","?q="+encodeURI(input.value))
           $('#results').empty()
           page = 0
           inputValue = input.value

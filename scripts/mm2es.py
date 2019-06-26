@@ -4,7 +4,7 @@ import json
 from bs4 import BeautifulSoup
 from subprocess import Popen, PIPE, STDOUT
 import time
-import elasticsearch6
+from elasticsearch import Elasticsearch
 import dateparser
 import re
 from pprint import pprint
@@ -12,9 +12,12 @@ from pprint import pprint
 mmExec = sys.argv[1] #first argument must be path to metamath executable
 mmFile = sys.argv[2] #second argument must be path to *.mm file
 esURL = sys.argv[3] #third argument must be elasticsearch url
-command = sys.argv[4] #fourth argument must be command (initialise, add <optional file list, if none adds those which are missing>, delete <file list>, show <optional file list, if none shows all>)
-labels = sys.argv[5:] #fifth argument onwards is optional file list for add, delete, show
+esIndex = sys.argv[4] #fourth argument must be name of elasticsearch index
+command = sys.argv[5] #fifth argument must be command (initialise, add <optional file list, if none adds those which are missing>, delete <file list>, show <optional file list, if none shows all>)
+labels = sys.argv[6:] #sixth argument onwards is optional file list for add, delete, show
 
+if len(sys.argv) < 5:
+    quit()
 if command not in "initialise delete add show".split():
     quit()
 if command == "delete" and len(labels) == 0:
@@ -70,10 +73,151 @@ mm("set scroll continuous")
 mm("read \'"+mmFile+"\'")
 
 #set up elasticsearch
-es = elasticsearch6.Elasticsearch([esURL], timeout=30, max_retries=10, retry_on_timeout=True)
+es = Elasticsearch([esURL], timeout=30, max_retries=10, retry_on_timeout=True)
 if command == "initialise":
-    es.indices.delete(index="metamath",ignore=[404])
-    es.indices.create(index="metamath")
+    es.indices.delete(index=esIndex,ignore=[404])
+    es.indices.create(index=esIndex, body={
+        "settings": {
+            "analysis": {
+                "analyzer": {
+                    "metamath": {
+                        "type": "custom",
+                        "tokenizer": "whitespace",
+                        "filter": [
+                                "shingle",
+                        ],
+                    },
+                    "html_text": {
+                        "type": "custom",
+                        "tokenizer": "standard",
+                        "char_filter": [
+                            "html_strip",
+                        ],
+                        "filter": [
+                            "asciifolding",
+                            "lowercase",
+                            "kstem",
+                            "shingle",
+                        ]
+                    },
+                    "html_metamath": {
+                        "type": "custom",
+                        "tokenizer": "whitespace",
+                        "char_filter": [
+                            "html_strip",
+                        ],
+                        "filter": [
+                            "shingle",
+                        ]
+                    }
+                },
+            }
+        },
+        "mappings": {
+            "properties": {
+                "name": {
+                    "type": "text",
+                    "analyzer": "keyword",
+                },
+                "usage":{
+                    "type": "text",
+                    "analyzer": "standard",
+                },
+                "source":{
+                    "type": "text",
+                    "analyzer": "metamath",
+                },
+                "proof":{
+                    "type": "text",
+                    "analyzer": "metamath",
+                },
+                "statementNumber":{
+                    "type" : "integer",
+                },
+                "comment":{
+                    "type": "text",
+                    "analyzer": "metamath",
+                },
+                "contributor":{
+                    "type": "text",
+                    "analyzer": "keyword",
+                },
+                "date":{
+                    "type" : "date",
+                },
+                "statement":{
+                    "type": "text",
+                    "analyzer": "metamath",
+                },
+                "hypotheses":{
+                    "type": "text",
+                    "analyzer": "metamath",
+                },
+                "optionalHypotheses":{
+                    "type": "text",
+                    "analyzer": "metamath",
+                },
+                "requiredVariables":{
+                    "type": "text",
+                    "analyzer": "metamath",
+                },
+                "allowedVariables":{
+                    "type": "text",
+                    "analyzer": "metamath",
+                },
+                "containedVariables":{
+                    "type": "text",
+                    "analyzer": "metamath",
+                },
+                "disjointPairs":{
+                    "type": "text",
+                    "analyzer": "metamath",
+                },
+                "html":{
+                    "properties": {
+                        "comment":{
+                            "type": "text",
+                            "analyzer": "html_text",
+                            "fields": {
+                                "metamath": {
+                                    "type": "text",
+                                    "analyzer": "html_metamath",
+                                }
+                            }
+                        },
+                        "syntaxHints":{
+                            "type": "text",
+                            "analyzer": "html_metamath",
+                        },
+                        "axioms":{
+                            "type": "text",
+                            "analyzer": "html_metamath",
+                        },
+                        "dependencies":{
+                            "type": "text",
+                            "analyzer": "html_metamath",
+                        },
+                        "usage":{
+                            "type": "text",
+                            "analyzer": "html_metamath",
+                        },
+                        "hypotheses":{
+                            "type": "text",
+                            "analyzer": "html_metamath",
+                        },
+                        "statement":{
+                            "type": "text",
+                            "analyzer": "html_metamath",
+                        },
+                        "proof":{
+                            "type": "text",
+                            "analyzer": "html_metamath",
+                        },
+                    }
+                }
+            }
+        }
+    })
 
 #get list of labels
 if len(labels) == 0:
@@ -86,11 +230,11 @@ if len(labels) == 0:
 
 #iterate through labels
 for labelIndex, label in enumerate(labels):
-    if command == "add" and es.exists(index="metamath",id=label,doc_type="json"):
+    if command == "add" and es.exists(index=esIndex,id=label):
         print("skipped",label,"("+str(labelIndex+1)+"/"+str(len(labels))+")")
         continue
     elif command == "delete":
-        es.delete(index="metamath",id=label,doc_type="json")
+        es.delete(index=esIndex,id=label)
         print("deleted",label,"("+str(labelIndex+1)+"/"+str(len(labels))+")")
     else:
         theorem = {"name":label}
@@ -235,7 +379,7 @@ for labelIndex, label in enumerate(labels):
 
         #send to elasticsearch
         if command == "add" or command == "initialise":
-            es.index(index="metamath", doc_type="json", id=label, body=theorem)
+            es.index(index=esIndex, id=label, body=theorem)
             print("added",label,"("+str(labelIndex+1)+"/"+str(len(labels))+")")
         elif command == "show":
             pprint(theorem)
